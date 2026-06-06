@@ -190,10 +190,11 @@
       "password": "Password",
       "rememberMe": "Remember me",
       "forgotPassword": "Forgot password?",
-      "noAccount": "Don't have an account?",
-      "createAccount": "Create one",
       "orDivider": "or",
-      "signIn": "Sign in"
+      "signIn": "Sign in",
+      "errorGeneral": "Sign-in failed. Please try again.",
+      "demoTitle": "Demo access",
+      "demoHint": "Click any of the three buttons to sign in as a demo user. No real account needed."
     },
     "signup": {
       "title": "Create your account",

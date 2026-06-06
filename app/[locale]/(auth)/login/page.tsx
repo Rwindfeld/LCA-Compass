@@ -3,11 +3,10 @@
 import { useState } from "react"
 import { signIn } from "next-auth/react"
 import { useRouter } from "next/navigation"
-import { useTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
 import { motion } from "framer-motion"
 import { CompassLogo } from "@/components/shared/CompassLogo"
 import { Eye, EyeOff, Loader2 } from "lucide-react"
-import Link from "next/link"
 
 function GoogleIcon() {
   return (
@@ -33,6 +32,7 @@ function MicrosoftIcon() {
 
 export default function LoginPage() {
   const t = useTranslations("auth.login")
+  const locale = useLocale()
   const router = useRouter()
   const [showEmailForm, setShowEmailForm] = useState(false)
   const [email, setEmail] = useState("")
@@ -40,6 +40,10 @@ export default function LoginPage() {
   const [showPassword, setShowPassword] = useState(false)
   const [loading, setLoading] = useState<string | null>(null)
   const [error, setError] = useState("")
+
+  const redirectToDashboard = () => {
+    router.push(`/${locale}/dashboard`)
+  }
 
   const handleOAuthLogin = async (provider: "google" | "microsoft") => {
     setLoading(provider)
@@ -52,12 +56,12 @@ export default function LoginPage() {
         redirect: false,
       })
       if (result?.error) {
-        setError("Login mislykkedes. Prøv igen.")
+        setError(t("errorGeneral"))
       } else {
-        router.push("/dashboard")
+        redirectToDashboard()
       }
     } catch {
-      setError("Der opstod en fejl. Prøv igen.")
+      setError(t("errorGeneral"))
     } finally {
       setLoading(null)
     }
@@ -75,12 +79,12 @@ export default function LoginPage() {
         redirect: false,
       })
       if (result?.error) {
-        setError("Login mislykkedes. Prøv igen.")
+        setError(t("errorGeneral"))
       } else {
-        router.push("/dashboard")
+        redirectToDashboard()
       }
     } catch {
-      setError("Der opstod en fejl. Prøv igen.")
+      setError(t("errorGeneral"))
     } finally {
       setLoading(null)
     }
@@ -106,9 +110,13 @@ export default function LoginPage() {
           <p className="text-sm text-ink/60 mb-8">{t("subtitle")}</p>
 
           {error && (
-            <div className="mb-4 p-3 bg-coral/10 border border-coral/20 rounded-lg text-sm text-coral">
+            <motion.div
+              initial={{ opacity: 0, y: -4 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-4 p-3 bg-coral/10 border border-coral/20 rounded-lg text-sm text-coral"
+            >
               {error}
-            </div>
+            </motion.div>
           )}
 
           {/* Provider buttons */}
@@ -116,10 +124,10 @@ export default function LoginPage() {
             <button
               onClick={() => handleOAuthLogin("google")}
               disabled={loading !== null}
-              className="w-full flex items-center gap-3 bg-bone border border-sage-mist/50 hover:border-forest-deep text-charcoal px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-compass hover:shadow-compass-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full flex items-center gap-3 bg-bone border border-sage-mist/50 hover:border-forest-deep active:bg-parchment text-charcoal px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-compass hover:shadow-compass-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading === "google" ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
+                <Loader2 className="w-4 h-4 animate-spin flex-shrink-0" />
               ) : (
                 <GoogleIcon />
               )}
@@ -129,10 +137,10 @@ export default function LoginPage() {
             <button
               onClick={() => handleOAuthLogin("microsoft")}
               disabled={loading !== null}
-              className="w-full flex items-center gap-3 bg-bone border border-sage-mist/50 hover:border-forest-deep text-charcoal px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-compass hover:shadow-compass-lg disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full flex items-center gap-3 bg-bone border border-sage-mist/50 hover:border-forest-deep active:bg-parchment text-charcoal px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200 shadow-compass hover:shadow-compass-lg disabled:opacity-50 disabled:cursor-not-allowed"
             >
               {loading === "microsoft" ? (
-                <Loader2 className="w-4 h-4 animate-spin" />
+                <Loader2 className="w-4 h-4 animate-spin flex-shrink-0" />
               ) : (
                 <MicrosoftIcon />
               )}
@@ -141,121 +149,92 @@ export default function LoginPage() {
 
             <button
               onClick={() => setShowEmailForm(!showEmailForm)}
-              className="w-full flex items-center gap-3 bg-bone border border-sage-mist/50 hover:border-forest-deep text-charcoal px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
+              className="w-full flex items-center gap-3 bg-bone border border-sage-mist/50 hover:border-forest-deep active:bg-parchment text-charcoal px-4 py-3 rounded-lg text-sm font-medium transition-all duration-200"
             >
-              <span className="w-4.5 h-4.5 flex items-center justify-center text-base">
-                ✉️
-              </span>
+              <span className="w-4 h-4 flex items-center justify-center text-sm flex-shrink-0">✉️</span>
               {t("continueWithEmail")}
             </button>
           </div>
 
-          {/* Divider */}
-          {showEmailForm && (
-            <div className="relative my-6">
-              <div className="absolute inset-0 flex items-center">
-                <div className="w-full border-t border-sage-mist/30" />
-              </div>
-              <div className="relative flex justify-center">
-                <span className="bg-bone px-3 text-xs text-ink/40">{t("orDivider")}</span>
-              </div>
-            </div>
-          )}
-
           {/* Email form */}
           {showEmailForm && (
-            <motion.form
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              onSubmit={handleEmailLogin}
-              className="space-y-4"
-            >
-              <div>
-                <label className="block text-sm font-medium text-charcoal mb-1.5">
-                  {t("email")}
-                </label>
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="din@email.dk"
-                  className="w-full bg-bone border border-sage-mist focus:border-brass focus:ring-2 focus:ring-brass/20 rounded-lg px-4 py-3 text-sm font-sans outline-none transition-all"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-charcoal mb-1.5">
-                  {t("password")}
-                </label>
-                <div className="relative">
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    placeholder="••••••••"
-                    className="w-full bg-bone border border-sage-mist focus:border-brass focus:ring-2 focus:ring-brass/20 rounded-lg px-4 py-3 text-sm font-sans outline-none transition-all pr-12"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => setShowPassword(!showPassword)}
-                    className="absolute right-3 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink transition-colors"
-                    aria-label={showPassword ? "Skjul kodeord" : "Vis kodeord"}
-                  >
-                    {showPassword ? (
-                      <EyeOff className="w-4 h-4" strokeWidth={1.5} />
-                    ) : (
-                      <Eye className="w-4 h-4" strokeWidth={1.5} />
-                    )}
-                  </button>
+            <>
+              <div className="relative my-6">
+                <div className="absolute inset-0 flex items-center">
+                  <div className="w-full border-t border-sage-mist/30" />
+                </div>
+                <div className="relative flex justify-center">
+                  <span className="bg-bone px-3 text-xs text-ink/40">{t("orDivider")}</span>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between">
-                <label className="flex items-center gap-2 text-sm text-ink/70 cursor-pointer">
-                  <input type="checkbox" className="rounded border-sage-mist" />
-                  {t("rememberMe")}
-                </label>
-                <button
-                  type="button"
-                  className="text-sm text-moss hover:text-forest-deep transition-colors"
-                >
-                  {t("forgotPassword")}
-                </button>
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading !== null}
-                className="w-full bg-forest-deep text-bone hover:bg-moss transition-colors duration-200 px-6 py-3 rounded-lg font-semibold text-sm shadow-compass disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              <motion.form
+                initial={{ opacity: 0, y: 8 }}
+                animate={{ opacity: 1, y: 0 }}
+                onSubmit={handleEmailLogin}
+                className="space-y-4"
               >
-                {loading === "email" && <Loader2 className="w-4 h-4 animate-spin" />}
-                {t("signIn")}
-              </button>
-            </motion.form>
+                <div>
+                  <label className="block text-sm font-medium text-charcoal mb-1.5">
+                    {t("email")}
+                  </label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="demo@lca-compass.dk"
+                    className="w-full bg-bone border border-sage-mist focus:border-brass focus:ring-2 focus:ring-brass/20 rounded-lg px-4 py-3 text-sm font-sans outline-none transition-all"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-charcoal mb-1.5">
+                    {t("password")}
+                  </label>
+                  <div className="relative">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      placeholder="••••••••"
+                      className="w-full bg-bone border border-sage-mist focus:border-brass focus:ring-2 focus:ring-brass/20 rounded-lg px-4 py-3 text-sm font-sans outline-none transition-all pr-12"
+                    />
+                    <button
+                      type="button"
+                      onClick={() => setShowPassword(!showPassword)}
+                      className="absolute right-3 top-1/2 -translate-y-1/2 text-ink/40 hover:text-ink transition-colors"
+                      aria-label={showPassword ? "Skjul" : "Vis"}
+                    >
+                      {showPassword ? (
+                        <EyeOff className="w-4 h-4" strokeWidth={1.5} />
+                      ) : (
+                        <Eye className="w-4 h-4" strokeWidth={1.5} />
+                      )}
+                    </button>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  disabled={loading !== null}
+                  className="w-full bg-forest-deep text-bone hover:bg-moss active:bg-moss transition-colors duration-200 px-6 py-3 rounded-lg font-semibold text-sm shadow-compass disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                >
+                  {loading === "email" && <Loader2 className="w-4 h-4 animate-spin" />}
+                  {t("signIn")}
+                </button>
+              </motion.form>
+            </>
           )}
 
-          <p className="mt-6 text-center text-sm text-ink/60">
-            {t("noAccount")}{" "}
-            <Link
-              href="/signup"
-              className="font-semibold text-forest-deep hover:text-moss transition-colors"
-            >
-              {t("createAccount")}
-            </Link>
-          </p>
-
           {/* Demo hint */}
-          <div className="mt-6 p-3 bg-brass/10 border border-brass/20 rounded-lg">
-            <p className="text-xs text-moss font-medium mb-1">✦ Demo-adgang</p>
-            <p className="text-xs text-ink/60">
-              Klik på en af de tre knapper for at logge ind som demo-bruger. Ingen rigtig konto nødvendig.
-            </p>
+          <div className="mt-8 p-3 bg-brass/10 border border-brass/20 rounded-lg">
+            <p className="text-xs text-moss font-medium mb-1">✦ {t("demoTitle")}</p>
+            <p className="text-xs text-ink/60">{t("demoHint")}</p>
           </div>
         </motion.div>
       </div>
 
-      {/* Right — Hero panel */}
+      {/* Right — Hero panel (kun desktop) */}
       <div className="hidden lg:flex flex-col items-center justify-center bg-forest-deep p-16 relative overflow-hidden">
-        {/* Background decoration */}
         <div className="absolute inset-0 opacity-10" aria-hidden="true">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
             <svg width="500" height="500" viewBox="0 0 200 200" fill="none">
@@ -266,7 +245,6 @@ export default function LoginPage() {
             </svg>
           </div>
         </div>
-
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -286,17 +264,6 @@ export default function LoginPage() {
             </div>
           </div>
         </motion.div>
-
-        <div className="absolute bottom-8 left-0 right-0 flex justify-center gap-2">
-          {[0, 1, 2].map((i) => (
-            <div
-              key={i}
-              className={`w-1.5 h-1.5 rounded-full ${
-                i === 0 ? "bg-brass" : "bg-sage-mist/30"
-              }`}
-            />
-          ))}
-        </div>
       </div>
     </div>
   )

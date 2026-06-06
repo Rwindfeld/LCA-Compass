@@ -190,10 +190,11 @@
       "password": "Adgangskode",
       "rememberMe": "Husk mig",
       "forgotPassword": "Glemt adgangskode?",
-      "noAccount": "Har du ikke en konto?",
-      "createAccount": "Opret en",
       "orDivider": "eller",
-      "signIn": "Log ind"
+      "signIn": "Log ind",
+      "errorGeneral": "Login mislykkedes. Prøv igen.",
+      "demoTitle": "Demo-adgang",
+      "demoHint": "Klik på en af de tre knapper for at logge ind som demo-bruger. Ingen rigtig konto nødvendig."
     },
     "signup": {
       "title": "Opret din konto",
