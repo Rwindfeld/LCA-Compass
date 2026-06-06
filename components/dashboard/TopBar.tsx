@@ -3,8 +3,7 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useTranslations, useLocale } from "next-intl"
-import { Bell, Plus, ChevronRight, LogOut, LayoutDashboard } from "lucide-react"
-import { signOut } from "next-auth/react"
+import { Plus, ChevronRight } from "lucide-react"
 import { ProductSearch } from "./ProductSearch"
 import { UserAccountMenu } from "./UserAccountMenu"
 
@@ -70,29 +69,29 @@ export function TopBar() {
   }
 
   return (
-    <header className="bg-bone border-b border-sage-mist/30 px-6 py-3.5 flex items-center gap-4 flex-shrink-0">
+    <header className="bg-bone border-b border-sage-mist/30 px-4 lg:px-6 py-3 flex items-center gap-3 flex-shrink-0 min-h-[52px]">
+      {/* Logo on mobile (sidebar is hidden) */}
       <Link
         href={`/${locale}/dashboard`}
-        className="lg:hidden flex-shrink-0 p-2 rounded-lg text-moss hover:bg-parchment transition-colors"
-        aria-label={t("dashboard")}
-        title={t("dashboard")}
+        className="lg:hidden flex-shrink-0"
+        aria-label="Dashboard"
       >
-        <LayoutDashboard className="w-5 h-5" strokeWidth={1.5} />
+        <span className="text-sm font-display font-bold text-forest-deep tracking-tight">LCA</span>
       </Link>
 
       {/* Breadcrumb */}
-      <nav aria-label="Brødsti" className="flex items-center gap-1.5 text-sm min-w-0 flex-1">
+      <nav aria-label="Brødsti" className="flex items-center gap-1 text-sm min-w-0 flex-1 overflow-hidden">
         {crumbs.map((crumb, i) => (
-          <span key={i} className="flex items-center gap-1.5 min-w-0">
+          <span key={i} className="flex items-center gap-1 min-w-0 flex-shrink-0">
             {i > 0 && (
-              <ChevronRight className="w-3.5 h-3.5 text-ink/30 flex-shrink-0" strokeWidth={1.5} />
+              <ChevronRight className="w-3 h-3 text-ink/30 flex-shrink-0" strokeWidth={1.5} />
             )}
             {crumb.isLast ? (
-              <span className="font-medium text-charcoal truncate">{crumb.label}</span>
+              <span className="font-medium text-charcoal truncate max-w-[140px] sm:max-w-none">{crumb.label}</span>
             ) : (
               <Link
                 href={crumb.href}
-                className="text-ink/50 hover:text-moss truncate transition-colors"
+                className="text-ink/50 hover:text-moss truncate transition-colors hidden sm:block"
               >
                 {crumb.label}
               </Link>
@@ -101,36 +100,19 @@ export function TopBar() {
         ))}
       </nav>
 
-      {/* Search */}
+      {/* Search — kun fra sm */}
       <ProductSearch className="hidden sm:block w-40 md:w-64 flex-shrink-0" />
 
       {/* Actions */}
-      <div className="flex items-center gap-2">
-        <button
-          className="relative p-2 rounded-lg hover:bg-parchment transition-colors"
-          aria-label={t("notifications")}
-        >
-          <Bell className="w-5 h-5 text-ink/50" strokeWidth={1.5} />
-          <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-brass rounded-full" />
-        </button>
-
+      <div className="flex items-center gap-1.5">
         <Link
           href={`/${locale}/products/new`}
-          className="inline-flex items-center gap-1.5 bg-forest-deep text-bone hover:bg-moss transition-colors duration-200 px-4 py-2 rounded-lg text-sm font-medium shadow-compass"
+          className="inline-flex items-center gap-1.5 bg-forest-deep text-bone hover:bg-moss active:bg-moss transition-colors duration-200 px-3 py-2 rounded-lg text-sm font-medium shadow-compass"
+          aria-label={t("newProduct")}
         >
-          <Plus className="w-4 h-4" strokeWidth={2} />
+          <Plus className="w-4 h-4 flex-shrink-0" strokeWidth={2} />
           <span className="hidden sm:inline">{t("newProduct")}</span>
         </Link>
-
-        <button
-          type="button"
-          onClick={() => signOut({ callbackUrl: `/${locale}/login` })}
-          className="lg:hidden inline-flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium text-coral hover:bg-coral/10 transition-colors"
-          aria-label={t("signOut")}
-        >
-          <LogOut className="w-4 h-4" strokeWidth={1.5} />
-          <span className="hidden sm:inline">{t("signOut")}</span>
-        </button>
 
         <UserAccountMenu variant="topbar" />
       </div>

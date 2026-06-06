@@ -135,26 +135,26 @@ export function ProductDetailClient({ product }: { product: any }) {
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           <button
             onClick={() => setShowDeleteDialog(true)}
-            className="p-2 rounded-lg text-ink/30 hover:text-coral hover:bg-coral/10 transition-all"
+            className="p-2 rounded-lg text-ink/30 hover:text-coral hover:bg-coral/10 active:bg-coral/10 transition-all"
             title="Slet produkt"
           >
             <Trash2 className="w-4 h-4" strokeWidth={1.5} />
           </button>
           <Link
             href={lp(`/products/${id}/export`)}
-            className="inline-flex items-center gap-1.5 bg-transparent border border-forest-deep text-forest-deep hover:bg-forest-deep hover:text-bone transition-all duration-200 px-4 py-2 rounded-lg text-sm font-medium"
+            className="inline-flex items-center gap-1.5 bg-transparent border border-forest-deep text-forest-deep hover:bg-forest-deep hover:text-bone active:bg-forest-deep active:text-bone transition-all duration-200 px-3 py-2 rounded-lg text-sm font-medium"
           >
-            <Download className="w-4 h-4" strokeWidth={1.5} />
-            {t("exportPdf")}
+            <Download className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
+            <span className="hidden sm:inline">{t("exportPdf")}</span>
           </Link>
           <Link
             href={lp(`/products/${id}/wizard/1`)}
-            className="inline-flex items-center gap-1.5 bg-forest-deep text-bone hover:bg-moss transition-colors duration-200 px-4 py-2 rounded-lg text-sm font-medium shadow-compass"
+            className="inline-flex items-center gap-1.5 bg-forest-deep text-bone hover:bg-moss active:bg-moss transition-colors duration-200 px-4 py-2 rounded-lg text-sm font-medium shadow-compass"
           >
-            <Edit3 className="w-4 h-4" strokeWidth={1.5} />
+            <Edit3 className="w-4 h-4 flex-shrink-0" strokeWidth={1.5} />
             {t("edit")}
           </Link>
         </div>

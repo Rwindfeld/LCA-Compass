@@ -1,5 +1,6 @@
 import { Sidebar } from "@/components/dashboard/Sidebar"
 import { TopBar } from "@/components/dashboard/TopBar"
+import { MobileNav } from "@/components/dashboard/MobileNav"
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -9,11 +10,12 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         <TopBar />
         <main
           id="main-content"
-          className="flex-1 overflow-y-auto p-6 lg:p-8"
+          className="flex-1 overflow-y-auto p-4 pb-20 lg:p-8 lg:pb-8"
         >
           {children}
         </main>
       </div>
+      <MobileNav />
     </div>
   )
 }

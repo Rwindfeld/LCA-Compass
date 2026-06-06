@@ -169,6 +169,16 @@ body {
   }
 }
 
+/* ── Safe area (iPhone notch/home-indicator) ── */
+.safe-area-inset-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+/* ── Tap highlight fjernet på interaktive elementer ── */
+a, button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 /* ── Skip to content ── */
 .skip-to-content {
   position: absolute;

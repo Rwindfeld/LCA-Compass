@@ -183,43 +183,47 @@ function ProductCard({ product, index, locale }: { product: Product; index: numb
   const TypeIcon = typeIcons[product.productType] ?? Package
 
   return (
-    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.06 }}
-      className="bg-parchment border border-sage-mist/30 rounded-xl p-5 shadow-compass hover:shadow-compass-lg hover:-translate-y-1 transition-all duration-300 group">
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 bg-bone border border-sage-mist/30 rounded-lg flex items-center justify-center">
-            <TypeIcon className="w-4 h-4 text-moss" strokeWidth={1.5} />
+    <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: index * 0.06 }}>
+      <Link
+        href={`/${locale}/products/${product.id}`}
+        className="block bg-parchment border border-sage-mist/30 rounded-xl p-5 shadow-compass hover:shadow-compass-lg active:scale-[0.98] hover:-translate-y-1 transition-all duration-300 group"
+      >
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 bg-bone border border-sage-mist/30 rounded-lg flex items-center justify-center flex-shrink-0">
+              <TypeIcon className="w-4 h-4 text-moss" strokeWidth={1.5} />
+            </div>
+            <div className="min-w-0">
+              <span className="text-xs text-ink/40 block truncate">{t(`type.${product.productType}`)}</span>
+              <p className="text-xs text-ink/40 mt-0.5">{t(`ambition.${product.ambitionLevel}`)}</p>
+            </div>
           </div>
-          <div>
-            <span className="text-xs text-ink/40">{t(`type.${product.productType}`)}</span>
-            <p className="text-xs text-ink/40 mt-0.5">{t(`ambition.${product.ambitionLevel}`)}</p>
+          <span className={`text-xs font-medium px-2.5 py-1 rounded-full flex-shrink-0 ml-2 ${statusColors[product.status] ?? "bg-ink/10 text-ink/60"}`}>
+            {t(`status.${product.status}`)}
+          </span>
+        </div>
+
+        <h3 className="text-sm font-semibold text-charcoal mb-3 line-clamp-2 leading-snug">{product.name}</h3>
+
+        <div className="mb-4">
+          <div className="flex items-center justify-between mb-1.5">
+            <span className="text-xs text-ink/40">Compliance</span>
+            <span className="text-xs font-mono text-moss">{product.complianceScore}%</span>
+          </div>
+          <div className="h-1.5 bg-sage-mist/20 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-forest-deep to-moss rounded-full transition-all duration-700" style={{ width: `${product.complianceScore}%` }} />
           </div>
         </div>
-        <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${statusColors[product.status] ?? "bg-ink/10 text-ink/60"}`}>
-          {t(`status.${product.status}`)}
-        </span>
-      </div>
 
-      <h3 className="text-sm font-semibold text-charcoal mb-3 line-clamp-2 leading-snug">{product.name}</h3>
-
-      <div className="mb-4">
-        <div className="flex items-center justify-between mb-1.5">
-          <span className="text-xs text-ink/40">Compliance</span>
-          <span className="text-xs font-mono text-moss">{product.complianceScore}%</span>
+        <div className="flex items-center justify-between">
+          <span className="text-xs text-ink/30">
+            {new Date(product.updatedAt).toLocaleDateString(locale === "en" ? "en-GB" : "da-DK", { day: "numeric", month: "short", year: "numeric" })}
+          </span>
+          <span className="inline-flex items-center gap-1 text-xs text-moss font-medium group-hover:gap-1.5 transition-all">
+            {t("open")} <ArrowRight className="w-3 h-3" strokeWidth={2} />
+          </span>
         </div>
-        <div className="h-1.5 bg-sage-mist/20 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-forest-deep to-moss rounded-full transition-all duration-700" style={{ width: `${product.complianceScore}%` }} />
-        </div>
-      </div>
-
-      <div className="flex items-center justify-between">
-        <span className="text-xs text-ink/30">
-          {new Date(product.updatedAt).toLocaleDateString(locale === "en" ? "en-GB" : "da-DK", { day: "numeric", month: "short", year: "numeric" })}
-        </span>
-        <Link href={`/products/${product.id}`} className="inline-flex items-center gap-1 text-xs text-moss hover:text-forest-deep font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-          {t("open")} <ArrowRight className="w-3 h-3" strokeWidth={2} />
-        </Link>
-      </div>
+      </Link>
     </motion.div>
   )
 }
@@ -229,26 +233,28 @@ function ProductListItem({ product, index, locale }: { product: Product; index: 
   const TypeIcon = typeIcons[product.productType] ?? Package
 
   return (
-    <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: index * 0.04 }}
-      className="bg-parchment border border-sage-mist/30 rounded-xl px-5 py-4 shadow-compass hover:shadow-compass-lg transition-all duration-300 flex items-center gap-4 group">
-      <div className="w-9 h-9 bg-bone border border-sage-mist/30 rounded-lg flex items-center justify-center flex-shrink-0">
-        <TypeIcon className="w-4 h-4 text-moss" strokeWidth={1.5} />
-      </div>
-      <div className="flex-1 min-w-0">
-        <h3 className="text-sm font-semibold text-charcoal truncate">{product.name}</h3>
-        <p className="text-xs text-ink/40">{t(`type.${product.productType}`)} · {t(`ambition.${product.ambitionLevel}`)}</p>
-      </div>
-      <span className={`hidden sm:inline text-xs font-medium px-2.5 py-1 rounded-full flex-shrink-0 ${statusColors[product.status] ?? "bg-ink/10 text-ink/60"}`}>
-        {t(`status.${product.status}`)}
-      </span>
-      <div className="hidden md:flex items-center gap-3 w-32">
-        <div className="flex-1 h-1.5 bg-sage-mist/20 rounded-full overflow-hidden">
-          <div className="h-full bg-gradient-to-r from-forest-deep to-moss rounded-full" style={{ width: `${product.complianceScore}%` }} />
+    <motion.div initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: index * 0.04 }}>
+      <Link
+        href={`/${locale}/products/${product.id}`}
+        className="bg-parchment border border-sage-mist/30 rounded-xl px-4 py-3.5 shadow-compass hover:shadow-compass-lg active:scale-[0.99] transition-all duration-300 flex items-center gap-3 group"
+      >
+        <div className="w-9 h-9 bg-bone border border-sage-mist/30 rounded-lg flex items-center justify-center flex-shrink-0">
+          <TypeIcon className="w-4 h-4 text-moss" strokeWidth={1.5} />
         </div>
-        <span className="text-xs font-mono text-moss w-8 text-right">{product.complianceScore}%</span>
-      </div>
-      <Link href={`/products/${product.id}`} className="inline-flex items-center gap-1 text-xs text-moss hover:text-forest-deep font-medium opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">
-        {t("open")} <ArrowRight className="w-3 h-3" strokeWidth={2} />
+        <div className="flex-1 min-w-0">
+          <h3 className="text-sm font-semibold text-charcoal truncate">{product.name}</h3>
+          <p className="text-xs text-ink/40 truncate">{t(`type.${product.productType}`)} · {t(`ambition.${product.ambitionLevel}`)}</p>
+        </div>
+        <span className={`hidden sm:inline text-xs font-medium px-2.5 py-1 rounded-full flex-shrink-0 ${statusColors[product.status] ?? "bg-ink/10 text-ink/60"}`}>
+          {t(`status.${product.status}`)}
+        </span>
+        <div className="hidden md:flex items-center gap-3 w-32 flex-shrink-0">
+          <div className="flex-1 h-1.5 bg-sage-mist/20 rounded-full overflow-hidden">
+            <div className="h-full bg-gradient-to-r from-forest-deep to-moss rounded-full" style={{ width: `${product.complianceScore}%` }} />
+          </div>
+          <span className="text-xs font-mono text-moss w-8 text-right">{product.complianceScore}%</span>
+        </div>
+        <ArrowRight className="w-4 h-4 text-moss flex-shrink-0 group-hover:translate-x-0.5 transition-transform" strokeWidth={1.5} />
       </Link>
     </motion.div>
   )

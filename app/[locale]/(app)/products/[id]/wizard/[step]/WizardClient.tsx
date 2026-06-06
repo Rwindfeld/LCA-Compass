@@ -128,7 +128,7 @@ export function WizardClient({ product, step }: { product: any; step: number }) 
   }
 
   return (
-    <div className="flex h-full -m-6 lg:-m-8">
+    <div className="flex h-full -m-4 lg:-m-8">
       {/* Left sidebar */}
       <div className="hidden lg:flex flex-col w-72 bg-parchment border-r border-sage-mist/30 flex-shrink-0 overflow-y-auto">
         <div className="px-5 py-5 border-b border-sage-mist/20">
@@ -245,7 +245,7 @@ export function WizardClient({ product, step }: { product: any; step: number }) 
           </div>
         </div>
 
-        <div className="flex-1 overflow-y-auto p-6 lg:p-8">
+        <div className="flex-1 overflow-y-auto p-4 lg:p-8">
           <AnimatePresence mode="wait">
             <motion.div
               key={step}
@@ -268,30 +268,30 @@ export function WizardClient({ product, step }: { product: any; step: number }) 
           </AnimatePresence>
         </div>
 
-        <div className="bg-bone border-t border-sage-mist/30 px-6 py-4 flex items-center justify-between flex-shrink-0">
+        <div className="bg-bone border-t border-sage-mist/30 px-4 py-3 flex items-center justify-between flex-shrink-0 gap-2">
           <button
             onClick={handleBack}
-            className="inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-forest-deep transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-ink hover:text-forest-deep active:text-forest-deep transition-colors py-2 px-1"
           >
-            <ChevronLeft className="w-4 h-4" strokeWidth={2} />
-            {t("back")}
+            <ChevronLeft className="w-4 h-4 flex-shrink-0" strokeWidth={2} />
+            <span className="hidden sm:inline">{t("back")}</span>
           </button>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <button
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex items-center gap-1.5 text-sm text-moss hover:text-forest-deep transition-colors"
+              className="hidden sm:inline-flex items-center gap-1.5 text-sm text-moss hover:text-forest-deep transition-colors"
             >
               <Save className="w-4 h-4" strokeWidth={1.5} />
               {t("save")}
             </button>
             <button
               onClick={handleNext}
-              className="inline-flex items-center gap-2 bg-forest-deep text-bone hover:bg-moss transition-colors duration-200 px-5 py-2.5 rounded-lg text-sm font-semibold shadow-compass"
+              className="inline-flex items-center gap-2 bg-forest-deep text-bone hover:bg-moss active:bg-moss transition-colors duration-200 px-4 py-2.5 rounded-lg text-sm font-semibold shadow-compass"
             >
               {step === 10 ? t("viewCompliance") : t("saveAndContinue")}
-              <ChevronRight className="w-4 h-4" strokeWidth={2} />
+              <ChevronRight className="w-4 h-4 flex-shrink-0" strokeWidth={2} />
             </button>
           </div>
         </div>
