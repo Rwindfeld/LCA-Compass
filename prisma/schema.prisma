@@ -1,0 +1,218 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "sqlite"
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  name      String?
+  image     String?
+  company   String?
+  role      UserRole  @default(USER)
+  locale    String    @default("da")
+  products  Product[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  accounts  Account[]
+  sessions  Session[]
+}
+
+enum UserRole {
+  USER
+  REVIEWER
+  ADMIN
+}
+
+model Product {
+  id             String        @id @default(cuid())
+  userId         String
+  user           User          @relation(fields: [userId], references: [id], onDelete: Cascade)
+  name           String
+  productType    ProductType
+  description    String?
+  ambitionLevel  AmbitionLevel @default(SCREENING)
+  status         ProductStatus @default(DRAFT)
+  goalScope      String?
+  lci            String?
+  lcia           String?
+  interpretation String?
+  criticalReview String?
+  complianceScore Int          @default(0)
+  isSeedData     Boolean       @default(false)
+  reports        Report[]
+  assumptions    Assumption[]
+  dataPoints     DataPoint[]
+  scenarios      Scenario[]
+  members        ProductMember[]
+  createdAt      DateTime      @default(now())
+  updatedAt      DateTime      @updatedAt
+}
+
+enum ProductMemberRole {
+  EDITOR
+  VIEWER
+}
+
+enum ProductMemberStatus {
+  PENDING
+  ACTIVE
+}
+
+model ProductMember {
+  id          String              @id @default(cuid())
+  productId   String
+  product     Product             @relation(fields: [productId], references: [id], onDelete: Cascade)
+  email       String
+  role        ProductMemberRole   @default(EDITOR)
+  status      ProductMemberStatus @default(PENDING)
+  inviteToken String              @unique
+  createdAt   DateTime            @default(now())
+
+  @@unique([productId, email])
+}
+
+enum ProductType {
+  ELECTRONICS
+  TEXTILE
+  FURNITURE
+  FOOD
+  PACKAGING
+  CONSTRUCTION
+  SOFTWARE_HARDWARE
+  OTHER
+}
+
+enum AmbitionLevel {
+  SCREENING
+  DETAILED
+  CRITICAL_REVIEWED
+  EPD_VERIFIED
+}
+
+enum ProductStatus {
+  DRAFT
+  IN_PROGRESS
+  REVIEW_PENDING
+  REVIEW_DONE
+  EPD_READY
+  PUBLISHED
+}
+
+model DataPoint {
+  id                  String     @id @default(cuid())
+  productId           String
+  product             Product    @relation(fields: [productId], references: [id], onDelete: Cascade)
+  phase               LCAPhase
+  category            String
+  key                 String
+  value               Float?
+  unit                String?
+  sourceType          SourceType
+  sourceDetails       String?
+  dqiReliability      Int?
+  dqiCompleteness     Int?
+  dqiTemporal         Int?
+  dqiGeographic       Int?
+  dqiTechnological    Int?
+  isMissing           Boolean    @default(false)
+  missingReason       String?
+  createdAt           DateTime   @default(now())
+  updatedAt           DateTime   @updatedAt
+}
+
+enum LCAPhase {
+  GOAL_SCOPE
+  RAW_MATERIAL
+  PRODUCTION
+  DISTRIBUTION
+  USE
+  END_OF_LIFE
+  LCIA
+  INTERPRETATION
+}
+
+enum SourceType {
+  MEASUREMENT
+  SUPPLIER_DATA
+  LITERATURE
+  DATABASE
+  ASSUMPTION
+  EXPERT_JUDGMENT
+}
+
+model Assumption {
+  id            String   @id @default(cuid())
+  productId     String
+  product       Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  phase         LCAPhase
+  description   String
+  justification String
+  impact        String?
+  createdAt     DateTime @default(now())
+}
+
+model Scenario {
+  id           String   @id @default(cuid())
+  productId    String
+  product      Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name         String
+  description  String?
+  isBaseline   Boolean  @default(false)
+  modifiedData String
+  createdAt    DateTime @default(now())
+}
+
+model Report {
+  id             String       @id @default(cuid())
+  documentId     String       @unique
+  productId      String
+  product        Product      @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productName    String
+  complianceScore Int         @default(0)
+  version        Int          @default(1)
+  locale         String
+  format         ReportFormat
+  generatedProse String?
+  htmlContent    String?
+  pdfUrl         String?
+  createdAt      DateTime     @default(now())
+}
+
+enum ReportFormat {
+  ISO_14044_FULL
+  EPD_ISO_14025
+  CARBON_FOOTPRINT_14067
+  COMPARATIVE_ASSERTION
+  CSRD_ANNEX
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+}

@@ -1,0 +1,23 @@
+# Render Blueprint — LCA Compass prototype
+# https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: lca-compass
+    runtime: node
+    plan: free
+    region: frankfurt
+    branch: main
+    buildCommand: npm ci && npx prisma generate && npm run build
+    startCommand: mkdir -p prisma/data && npm run start:render
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "20"
+      - key: DATABASE_URL
+        value: file:./prisma/data/lca.db
+      - key: AI_PROVIDER
+        value: template
+      - key: NEXTAUTH_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false

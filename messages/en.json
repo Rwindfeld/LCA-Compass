@@ -1,0 +1,1145 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "saveAndContinue": "Save and continue",
+    "required": "Required",
+    "optional": "Optional",
+    "yes": "Yes",
+    "no": "No",
+    "search": "Search",
+    "filter": "Filter",
+    "export": "Export",
+    "generate": "Generate",
+    "view": "View",
+    "open": "Open",
+    "duplicate": "Duplicate",
+    "new": "New"
+  },
+  "landing": {
+    "nav": {
+      "product": "Product",
+      "verify": "Verify document",
+      "standards": "Standards",
+      "about": "About",
+      "login": "Sign in",
+      "getStarted": "Get started"
+    },
+    "verify": {
+      "eyebrow": "Official document verification",
+      "title": "Look up an LCA document ID",
+      "subtitle": "Verify that a report was issued by LCA Compass with unaltered data. The ID is shown on the cover and in the footer of every official document.",
+      "inputLabel": "Document ID",
+      "placeholder": "e.g. CLXY-1A2B",
+      "submit": "View official document",
+      "hint": "ID format: XXXX-YYYY (as printed next to the LCA Compass seal on the PDF).",
+      "trust": {
+        "seal": "LCA Compass official seal",
+        "data": "Data generated in the platform",
+        "timestamp": "Issue date on record"
+      },
+      "errors": {
+        "invalid": "Invalid document ID. Check the format (e.g. ABCD-1A2B).",
+        "notFound": "No document found with this ID. It may not have been issued from LCA Compass.",
+        "generic": "Could not verify right now. Please try again."
+      },
+      "verifiedBadge": "Verified by LCA Compass",
+      "viewerTitle": "Official LCA document",
+      "viewerSubtitle": "This document is registered in LCA Compass. The content below is the issued document — not a third-party copy.",
+      "officialNotice": "Data and structure originate from LCA Compass",
+      "back": "Back to home",
+      "print": "Print / save as PDF",
+      "iframeTitle": "LCA document {id}",
+      "meta": {
+        "id": "Document ID",
+        "product": "Product",
+        "issued": "Issued",
+        "format": "Report type"
+      }
+    },
+    "hero": {
+      "eyebrow": "ISO 14040/14044 · ISO 14025 EPD · ISO 14067 CFP",
+      "title": "From product idea to official LCA documentation — in under an hour",
+      "subtitle": "LCA-Compass guides you through ISO 14044 requirements step by step and generates professional PDF documentation ready for publication.",
+      "ctaPrimary": "Get started",
+      "ctaSecondary": "See demo with QR vs RFID",
+      "trustedBy": "Used by progressive design teams"
+    },
+    "problem": {
+      "title": "LCA is complex. Until now.",
+      "cards": {
+        "standards": {
+          "title": "ISO 14040/14044 spans 100+ pages",
+          "description": "Requirements, definitions and methods spread across two complex documents."
+        },
+        "cost": {
+          "title": "Consultants cost €7,000–27,000 per study",
+          "description": "High consulting costs keep SMEs out of the LCA market."
+        },
+        "tools": {
+          "title": "Excel templates lack validation",
+          "description": "Missing automation and ISO validation leads to errors and inconsistency."
+        }
+      }
+    },
+    "features": {
+      "title": "Everything you need for official LCA documentation",
+      "items": {
+        "wizard": {
+          "title": "Guided ISO 14040/14044 wizard",
+          "description": "10-step wizard covering all ISO requirements with explanations throughout."
+        },
+        "lcia": {
+          "title": "LCIA with ReCiPe, CML, TRACI, EF 3.1",
+          "description": "Select your LCIA method and get automatic characterization."
+        },
+        "prose": {
+          "title": "AI-generated professional report text",
+          "description": "ISO-compliant prose that reads like human-written technical documentation."
+        },
+        "dqi": {
+          "title": "Pedigree matrix data quality",
+          "description": "DQI scoring on all data points with automatic quality assessment."
+        },
+        "review": {
+          "title": "Critical review workflow",
+          "description": "ISO 14071-based review process with internal and external reviewer options."
+        },
+        "pdf": {
+          "title": "PDF export in Danish and English",
+          "description": "ISO 14044-structured report ready for publication and EPD submission."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "From blank slate to EPD-ready in 4 steps",
+      "steps": {
+        "define": {
+          "title": "Define goal",
+          "description": "Functional unit, system boundaries, scope"
+        },
+        "input": {
+          "title": "Enter data",
+          "description": "5 lifecycle phases, automatic DQI scoring"
+        },
+        "analyze": {
+          "title": "Analyse impact",
+          "description": "Choose LCIA method, run sensitivity analysis"
+        },
+        "export": {
+          "title": "Export PDF",
+          "description": "ISO 14044-structured report in EN/DK"
+        }
+      }
+    },
+    "trustedBy": {
+      "label": "Designed for progressive design teams and product developers"
+    },
+    "standards": {
+      "title": "Built on international standards",
+      "subtitle": "LCA-Compass covers all relevant ISO standards for official lifecycle documentation",
+      "readMore": "Read more",
+      "iso14040": { "name": "Principles and framework", "description": "The overarching principles and requirements for conducting an LCA." },
+      "iso14044": { "name": "Requirements and guidelines", "description": "Detailed requirements for all phases: goal & scope, LCI, LCIA, and interpretation." },
+      "iso14025": { "name": "EPD — Type III", "description": "Requirements for Type III environmental declarations (EPD) for publication and communication." },
+      "iso14067": { "name": "Carbon Footprint", "description": "Principles and requirements for quantifying the CO₂ footprint of products." },
+      "iso14071": { "name": "Critical Review", "description": "Requirements for conducting critical review processes for LCA studies." },
+      "en15978": { "name": "Building products", "description": "Assessment of the environmental performance of buildings — uses ISO 14044." }
+    },
+    "comparison": {
+      "title": "Compare your options",
+      "feature": "Feature",
+      "consultant": "Consultant",
+      "lcaTime": "<1 hour",
+      "simaproTime": "Days–weeks",
+      "consultantTime": "Weeks–months",
+      "excelTime": "Days",
+      "rows": {
+        "time": "Time to first report",
+        "iso": "ISO 14044 validation",
+        "guided": "Guided workflow",
+        "ai": "AI-generated report",
+        "pdf": "PDF export",
+        "bilingual": "DK/EN reports",
+        "epd": "EPD-ready output",
+        "noExpert": "No expertise required"
+      }
+    },
+    "cta": {
+      "title": "Ready to give your next product an official LCA?",
+      "button": "Get started with LCA-Compass",
+      "subline": "100% free · No credit card · ISO 14044-compliant"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Sign in to LCA-Compass",
+      "subtitle": "Choose your preferred sign-in method",
+      "continueWithGoogle": "Continue with Google",
+      "continueWithMicrosoft": "Continue with Microsoft",
+      "continueWithEmail": "Continue with email",
+      "email": "Email",
+      "password": "Password",
+      "rememberMe": "Remember me",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "createAccount": "Create one",
+      "orDivider": "or",
+      "signIn": "Sign in"
+    },
+    "signup": {
+      "title": "Create your account",
+      "subtitle": "Create your account and get started",
+      "name": "Full name",
+      "company": "Company (optional)",
+      "email": "Email",
+      "password": "Password",
+      "createAccount": "Create account",
+      "alreadyHaveAccount": "Already have an account?",
+      "signIn": "Sign in"
+    }
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening"
+    },
+    "subtitle": "You have {count} products under analysis",
+    "stats": {
+      "activeProducts": "Active products",
+      "avgCompliance": "Avg compliance score",
+      "epdReady": "EPD-ready",
+      "missingFields": "Missing fields"
+    },
+    "quickActions": {
+      "newProduct": "Create new product",
+      "newProductDesc": "Start a new LCA from scratch",
+      "compare": "Compare products",
+      "compareDesc": "Side-by-side analysis of 2+ products",
+      "guide": "Learn LCA requirements and ISO",
+      "guideDesc": "Professional introduction and official standards"
+    },
+    "quickActionsTitle": "Quick actions",
+    "recentProducts": "Recent products",
+    "seeAll": "See all",
+    "activity": "Activity",
+    "noProducts": "No products yet",
+    "createFirst": "Create your first product and start your LCA journey",
+    "open": "Open",
+    "colStatus": "Status",
+    "colCompliance": "Compliance",
+    "colUpdated": "Updated"
+  },
+  "products": {
+    "title": "Products",
+    "new": "New product",
+    "search": "Search products...",
+    "filter": "Filter",
+    "gridView": "Grid view",
+    "listView": "List view",
+    "status": {
+      "DRAFT": "Draft",
+      "IN_PROGRESS": "In progress",
+      "REVIEW_PENDING": "Review pending",
+      "REVIEW_DONE": "Review done",
+      "EPD_READY": "EPD ready",
+      "PUBLISHED": "Published"
+    },
+    "type": {
+      "ELECTRONICS": "Electronics",
+      "TEXTILE": "Textile",
+      "FURNITURE": "Furniture",
+      "FOOD": "Food",
+      "PACKAGING": "Packaging",
+      "CONSTRUCTION": "Construction",
+      "SOFTWARE_HARDWARE": "Software/hardware",
+      "OTHER": "Other"
+    },
+    "ambition": {
+      "SCREENING": "Screening",
+      "DETAILED": "Detailed",
+      "CRITICAL_REVIEWED": "Critical reviewed",
+      "EPD_VERIFIED": "EPD verified"
+    },
+    "detail": {
+      "tabs": {
+        "overview": "Overview",
+        "wizard": "Wizard",
+        "compliance": "Compliance",
+        "report": "Report",
+        "export": "Export",
+        "scenarios": "Scenarios",
+        "review": "Review"
+      },
+      "overview": {
+        "goalScope": "Goal & Scope",
+        "phasesProgress": "Phase progress",
+        "lciaResults": "LCIA results",
+        "hotspots": "Hotspots",
+        "missingFields": "Missing fields",
+        "nextStep": "Next step"
+      }
+    },
+    "open": "Open",
+    "totalCount": "products total",
+    "allStatuses": "All statuses",
+    "noResults": "No results for \"{query}\"",
+    "tryOtherSearch": "Try a different search term or clear the filter",
+    "empty": {
+      "title": "No products yet",
+      "description": "Create your first product and start your LCA journey",
+      "cta": "Create product"
+    },
+    "compareLink": "Compare products",
+    "compare": {
+      "title": "Compare products",
+      "subtitle": "Pick two products and review key metrics side by side",
+      "backToProducts": "← All products",
+      "productA": "Product A",
+      "productB": "Product B",
+      "choose": "Select product…",
+      "swap": "Swap products",
+      "sameProduct": "Choose two different products.",
+      "pickTwo": "Select product A and B to start comparing.",
+      "needMoreProducts": "You need at least two products before you can compare.",
+      "metric": "Metric",
+      "complianceLabel": "ISO 14044 compliance",
+      "notSet": "Not set",
+      "yes": "Complete",
+      "no": "Missing",
+      "deltaTitle": "Difference (B − A)",
+      "gwpDelta": "GWP",
+      "gwpDeltaHint": "lower is better",
+      "complianceDelta": "Compliance",
+      "openProduct": "Open {name}",
+      "rows": {
+        "type": "Product type",
+        "status": "Status",
+        "ambition": "Ambition level",
+        "compliance": "Compliance score",
+        "checklist": "ISO checklist",
+        "functionalUnit": "Functional unit",
+        "systemBoundaries": "System boundaries",
+        "geographicScope": "Geographic scope",
+        "lciaMethod": "LCIA method",
+        "gwp": "GWP (climate impact)",
+        "eWaste": "E-waste",
+        "updated": "Last updated"
+      }
+    }
+  },
+  "wizard": {
+    "steps": {
+      "goalScope": "Goal & Scope",
+      "rawMaterial": "Raw material",
+      "production": "Production",
+      "distribution": "Distribution",
+      "use": "Use phase",
+      "endOfLife": "End-of-life",
+      "lcia": "LCIA configuration",
+      "interpretation": "Interpretation",
+      "criticalReview": "Critical Review",
+      "compliance": "Compliance Check"
+    },
+    "autoSaved": "Saved {time} ago",
+    "saving": "Saving...",
+    "progress": "Step {current} of {total}",
+    "fields": {
+      "productName": {
+        "label": "Product name",
+        "placeholder": "e.g. 'QR system for board game café'"
+      },
+      "productType": {
+        "label": "Product type"
+      },
+      "purpose": {
+        "label": "Purpose of LCA",
+        "placeholder": "What is the primary reason for conducting this LCA?"
+      },
+      "functionalUnit": {
+        "label": "Functional unit",
+        "helper": "The quantified service delivered by the product. Must be measurable and specific.",
+        "placeholder": "e.g. 'Track one board game for one year with ≥85% data validity'"
+      },
+      "systemBoundaries": {
+        "label": "System boundaries"
+      },
+      "allocationApproach": {
+        "label": "Allocation approach"
+      }
+    },
+    "redFlag": {
+      "title": "Missing information",
+      "whyImportant": "Why it matters:",
+      "isoReference": "ISO reference:",
+      "howToFind": "How to find this information:",
+      "impact": "Impact:",
+      "markIrrelevant": "Mark as not relevant",
+      "findData": "Find data"
+    }
+  },
+  "compliance": {
+    "title": "Compliance Check",
+    "score": "ISO 14044 Compliance Score",
+    "checklist": {
+      "title": "ISO 14044 Checklist",
+      "fulfilled": "Fulfilled",
+      "partial": "Partial",
+      "missing": "Missing"
+    },
+    "levels": {
+      "title": "Compare with ambition level",
+      "screening": "Screening",
+      "detailed": "Detailed",
+      "criticalReviewed": "Critical reviewed",
+      "epdVerified": "EPD verified"
+    },
+    "generateReport": "Generate report draft"
+  },
+  "export": {
+    "title": "Export report",
+    "formats": {
+      "iso14044": {
+        "name": "ISO 14044 Full Report",
+        "description": "Complete ISO 14044-structured LCA report",
+        "recommended": "Recommended"
+      },
+      "epd": {
+        "name": "EPD (ISO 14025)",
+        "description": "Environmental Product Declaration",
+        "requiresLevel": "Requires EPD-verified level"
+      },
+      "carbon": {
+        "name": "Carbon Footprint (ISO 14067)",
+        "description": "GWP/climate impact only"
+      },
+      "comparative": {
+        "name": "Comparative Assertion",
+        "description": "Comparison of 2+ scenarios"
+      }
+    },
+    "language": "Report language",
+    "danish": "Danish",
+    "english": "English",
+    "advanced": "Advanced options",
+    "includeAppendices": "Include appendices",
+    "anonymize": "Anonymise company names",
+    "showDqi": "Show DQI pedigree matrix",
+    "generatePdf": "Generate PDF",
+    "generating": "Generating PDF..."
+  },
+  "footer": {
+    "tagline": "From product idea to official ISO 14044 documentation.",
+    "product": "Product",
+    "features": "Features",
+    "demo": "See demo",
+    "standards": "Standards",
+    "resources": "Resources",
+    "isoGuide": "LCA requirements & ISO",
+    "documentation": "Documentation",
+    "company": "Company",
+    "about": "About us",
+    "contact": "Contact",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "products": "Products",
+    "reports": "Reports",
+    "settings": "Settings",
+    "newProduct": "New product",
+    "report": "Report",
+    "export": "Export",
+    "searchProducts": "Search products...",
+    "searchLoading": "Searching...",
+    "searchNoResults": "No products found",
+    "searchViewAll": "View all results for \"{query}\"",
+    "notifications": "Notifications",
+    "signOut": "Sign out",
+    "compare": "Compare",
+    "guide": "LCA & ISO"
+  },
+  "guide": {
+    "title": "Learn LCA requirements and ISO",
+    "subtitle": "A professional introduction to Life Cycle Assessment (LCA) and the international standards LCA Compass is built on.",
+    "backToDashboard": "← Dashboard",
+    "disclaimer": "Links point to official publishers (ISO, CEN, EU). Full standard texts are typically licensed and purchased via ISO or your national standards body.",
+    "whatIsLca": {
+      "title": "What is LCA?",
+      "p1": "Life Cycle Assessment (LCA) is a systematic method to quantify a product's environmental impacts from cradle to grave — or within the system boundaries defined by the study. It tracks material and energy flows, converts them to environmental impact indicators (e.g. climate change, resource use), and interprets results against the study's objectives.",
+      "p2": "LCA is not a single number but a structured decision process: goal and scope define what is measured and for whom; the life cycle inventory (LCI) documents inputs and outputs; life cycle impact assessment (LCIA) links data to impact categories; interpretation evaluates uncertainty, sensitivity, and limitations. Results must always be reported with method, assumptions, and data quality.",
+      "p3": "In Europe, LCA supports product policy, green procurement, EPD programmes, and corporate climate reporting. ISO 14040 and ISO 14044 are the core international reference standards for how studies are planned, executed, and documented.",
+      "phasesTitle": "The four LCA phases (ISO 14040/14044)",
+      "phases": {
+        "goalScope": {
+          "title": "Goal and scope",
+          "desc": "Purpose, functional unit, system boundaries, allocation, and data quality requirements."
+        },
+        "inventory": {
+          "title": "Life cycle inventory (LCI)",
+          "desc": "Data collection for raw materials, production, transport, use, and end-of-life."
+        },
+        "impact": {
+          "title": "Life cycle impact assessment (LCIA)",
+          "desc": "LCIA method selection and calculation of impact categories (e.g. GWP, eutrophication)."
+        },
+        "interpretation": {
+          "title": "Interpretation",
+          "desc": "Sensitivity, uncertainty, limitations, conclusions, and recommendations."
+        }
+      }
+    },
+    "standardsTitle": "Official standards and documents",
+    "standardsIntro": "Below are the main normative references for product LCA, EPDs, and footprints. Each link goes to the official standard page at the publisher.",
+    "roleLabel": "Role in LCA work",
+    "officialDocument": "View official document at publisher",
+    "freeAccess": "Free access",
+    "openResource": "Open resource",
+    "supplementaryIntro": "Additional publicly available guidance widely used alongside ISO standards.",
+    "startLca": "Start an LCA in LCA Compass",
+    "categories": {
+      "core": "Core LCA (ISO 14040/14044)",
+      "declarations": "Environmental declarations & PCR",
+      "footprints": "Footprints (climate, water, etc.)",
+      "review": "Quality assurance & review",
+      "organizational": "Organizational LCA",
+      "supplementary": "Supplementary resources (free)"
+    },
+    "standards": {
+      "iso14040": {
+        "name": "Principles and framework",
+        "description": "Defines principles, concepts, and the overarching framework for LCA and LCI studies.",
+        "role": "Foundation for all product LCAs — describes phases and how they relate."
+      },
+      "iso14044": {
+        "name": "Requirements and guidelines",
+        "description": "Operational standard with requirements for goal/scope, LCI, LCIA, interpretation, reporting, and optional elements.",
+        "role": "What LCA Compass validates against — checklist and report structure follow ISO 14044."
+      },
+      "iso14025": {
+        "name": "Type III environmental declarations (EPD)",
+        "description": "Principles and procedures for Type III declarations based on LCA.",
+        "role": "Basis for EPD programmes and public communication of LCA results."
+      },
+      "iso14027": {
+        "name": "Product category rules (PCR)",
+        "description": "Requirements for developing, reviewing, and registering PCR in EPD and footprint programmes.",
+        "role": "Ensures comparability between EPDs within the same product category."
+      },
+      "iso14026": {
+        "name": "Communication of footprint information",
+        "description": "Principles for transparent communication of environmental footprints for products.",
+        "role": "Relevant when LCA results are communicated as footprints beyond a full EPD."
+      },
+      "iso14067": {
+        "name": "Product carbon footprint (CFP)",
+        "description": "Requirements for quantifying and communicating product greenhouse gas emissions using LCA methodology.",
+        "role": "Used for carbon footprint reporting; builds on ISO 14040/14044 with focus on GWP."
+      },
+      "iso14046": {
+        "name": "Water footprint",
+        "description": "Principles and requirements for water footprint of products, processes, and organizations.",
+        "role": "Supplementary impact dimension when water use/stress must be documented."
+      },
+      "iso14071": {
+        "name": "Critical review",
+        "description": "Requirements and guidance for critical review of LCA, including reviewer competencies.",
+        "role": "Required for comparative assertions and recommended for EPD and external publication."
+      },
+      "iso14072": {
+        "name": "Organizational LCA (O-LCA)",
+        "description": "Additional requirements for applying ISO 14040/14044 at organizational level.",
+        "role": "Relevant for company-wide environmental profiles — not single-product LCA."
+      },
+      "en15804": {
+        "name": "Sustainability of construction works — EPD",
+        "description": "European standard for EPD of construction products; core PCR for the building sector.",
+        "role": "Often required for construction products in the EU; links ISO 14025 with EN 15804+A2."
+      }
+    },
+    "resources": {
+      "ilcd": {
+        "title": "ILCD Handbook (EU JRC)",
+        "description": "European Commission's official LCA handbook: data guidance, quality, review, and reporting — widely used in the EU."
+      },
+      "pef": {
+        "title": "Product Environmental Footprint (PEF)",
+        "description": "EU method and rules for product environmental footprint — relevant for market requirements and EU policy."
+      }
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "profile": "Profile",
+    "company": "Company",
+    "language": "Language",
+    "notifications": "Notifications",
+    "api": "API keys",
+    "save": "Save changes",
+    "fullName": "Full name",
+    "email": "Email",
+    "emailReadOnly": "Email cannot be changed in demo mode",
+    "companyName": "Company name",
+    "appLanguage": "App language",
+    "languageNote": "Report language is chosen separately on export and does not affect the app language.",
+    "active": "Active",
+    "apiNote": "Switch to Google Gemini free AI by setting AI_PROVIDER=gemini and GEMINI_API_KEY in your .env file.",
+    "notAvailableInDemo": "These settings are not available in the demo version"
+  },
+  "productMembers": {
+    "title": "Product team",
+    "subtitle": "Invite colleagues — they only get access to this product (wizard, data, report).",
+    "prototypeBadge": "Prototype",
+    "prototypeNote": "No email is sent in this demo. Use «Copy link» and open the invite page to demonstrate the flow to your examiner.",
+    "emailPlaceholder": "colleague@company.com",
+    "invite": "Invite",
+    "empty": "No invites yet.",
+    "copyLink": "Copy link",
+    "copied": "Copied",
+    "preview": "Preview",
+    "remove": "Remove",
+    "role": {
+      "EDITOR": "Can edit",
+      "VIEWER": "Can view"
+    },
+    "status": {
+      "PENDING": "Invite sent",
+      "ACTIVE": "Has access"
+    }
+  },
+  "inviteAccept": {
+    "title": "LCA product invitation",
+    "invitedTo": "You are invited to work on",
+    "email": "Email",
+    "access": "Access",
+    "accessDesc": "This product only — wizard, data, and reports",
+    "prototypeBadge": "Prototype",
+    "prototypeNote": "In a full version you would sign in with your email. Here you can accept the invite as a demo.",
+    "acceptDemo": "Accept invitation (demo)",
+    "accepted": "Invitation accepted",
+    "openProduct": "Open product",
+    "notFound": "This invitation was not found or has expired.",
+    "backDashboard": "Back to dashboard"
+  },
+  "newProduct": {
+    "title": "Create new product",
+    "subtitle": "Fill in basic information to start the LCA wizard",
+    "nameLabel": "Product name",
+    "namePlaceholder": "e.g. 'QR system for board game café', 'Bamboo chair model A'",
+    "typeLabel": "Product type",
+    "descLabel": "Description",
+    "descPlaceholder": "Brief description of the product and its primary function...",
+    "ambitionLabel": "Ambition level",
+    "creating": "Creating product...",
+    "startWizard": "Start LCA Wizard",
+    "required": "Required",
+    "optional": "Optional",
+    "inviteLabel": "Invite collaborators",
+    "inviteHint": "Prototype: no real email — you get an invite link to show your examiner.",
+    "invitePlaceholder": "e.g. colleague@company.com, supplier@mail.com",
+    "types": {
+      "ELECTRONICS": "Electronics",
+      "SOFTWARE_HARDWARE": "Software/hardware",
+      "TEXTILE": "Textile",
+      "FURNITURE": "Furniture",
+      "FOOD": "Food & Drink",
+      "PACKAGING": "Packaging",
+      "CONSTRUCTION": "Construction product",
+      "OTHER": "Other"
+    },
+    "ambitions": {
+      "SCREENING": { "label": "Screening", "desc": "Quick overview" },
+      "DETAILED": { "label": "Detailed", "desc": "Full ISO 14044 coverage" },
+      "CRITICAL_REVIEWED": { "label": "Critical reviewed", "desc": "External reviewer" },
+      "EPD_VERIFIED": { "label": "EPD verified", "desc": "Official EPD" }
+    }
+  },
+  "productDetail": {
+    "tabs": {
+      "overview": "Overview",
+      "wizard": "Wizard",
+      "compliance": "Compliance",
+      "report": "Report",
+      "export": "Export",
+      "scenarios": "Scenarios",
+      "review": "Review"
+    },
+    "exportPdf": "Export PDF",
+    "edit": "Edit",
+    "open": "Open",
+    "backToProducts": "Products",
+    "phases": {
+      "raw_material": "Raw material",
+      "production": "Production",
+      "distribution": "Distribution",
+      "use": "Use phase",
+      "end_of_life": "End-of-life"
+    },
+    "overview": {
+      "goalScope": "Goal & Scope",
+      "editLink": "Edit →",
+      "functionalUnit": "Functional unit",
+      "systemBoundaries": "System boundaries",
+      "geographicScope": "Geographic scope",
+      "notFilledYet": "Not filled in yet",
+      "phaseProgress": "Phase progress",
+      "lciaResults": "LCIA results",
+      "gwp": "GWP (climate impact)",
+      "lciaNotConfigured": "LCIA not configured yet",
+      "hotspots": "Top hotspots",
+      "missingFields": "{count} missing fields",
+      "nextStep": "Next step",
+      "continueWizard": "Continue wizard to increase your compliance score",
+      "continueWizardBtn": "Continue wizard",
+      "reportTitle": "Report",
+      "reportDesc": "Generate AI-based report text for all sections",
+      "openReport": "Open report viewer",
+      "exportTitle": "Export",
+      "exportDesc": "Export the report as an ISO 14044-structured PDF",
+      "goToExport": "Go to export",
+      "scenariosTitle": "Scenarios",
+      "scenariosDesc": "Create alternative scenarios for sensitivity analysis and comparison",
+      "reviewNote": "Critical review is required at ambition level 3 (Critical reviewed) or 4 (EPD verified).",
+      "configureReview": "Configure your critical review process (ISO 14071)",
+      "complianceReady": "Ready for report generation",
+      "complianceGood": "Good progress — fill in missing fields",
+      "complianceLow": "Missing data in several key sections",
+      "viewChecklist": "View full compliance checklist",
+      "checklistMeta": "ISO 14044 — {total} requirements ({fulfilled} fulfilled)"
+    },
+    "scenarios": {
+      "title": "Scenarios & sensitivity",
+      "subtitle": "Create alternative assumptions and compare GWP to baseline — for ISO 14044 interpretation and comparative assertions.",
+      "newScenario": "New scenario",
+      "templates": "Quick templates",
+      "createTitle": "Create scenario",
+      "nameLabel": "Name",
+      "namePlaceholder": "e.g. 100% green electricity",
+      "descLabel": "Description (optional)",
+      "leverLabel": "Parameter",
+      "percentLabel": "Change",
+      "assumptionsLabel": "Assumptions",
+      "cancel": "Cancel",
+      "save": "Save scenario",
+      "comparisonTitle": "GWP comparison",
+      "comparisonNote": "Calculations are illustrative sensitivity estimates based on baseline GWP and phase hotspots from interpretation. Always validate in the wizard before official reporting.",
+      "baseline": "Baseline",
+      "delete": "Delete scenario",
+      "needLciaTitle": "LCIA required first",
+      "needLciaDesc": "Complete step 7 (LCIA) in the wizard with a GWP result before creating scenarios.",
+      "gwpResult": "Scenario GWP",
+      "vsBaseline": "vs. baseline",
+      "lever": {
+        "gwp_overall": "Overall GWP (all phases)",
+        "transport": "Transport / distribution",
+        "use_energy": "Use phase (energy)",
+        "recycled_eol": "End-of-life / recycling",
+        "custom_gwp": "Direct GWP value"
+      },
+      "template": {
+        "green_electricity": {
+          "name": "Green electricity mix",
+          "desc": "−20% on use-phase energy"
+        },
+        "shorter_transport": {
+          "name": "Shorter transport",
+          "desc": "−40% transport contribution"
+        },
+        "high_recycling": {
+          "name": "High recycling",
+          "desc": "−30% EOL contribution"
+        },
+        "pessimistic": {
+          "name": "Pessimistic case",
+          "desc": "+15% overall GWP"
+        }
+      }
+    },
+    "wizardSteps": {
+      "1": "Goal & Scope",
+      "2": "Raw material",
+      "3": "Production",
+      "4": "Distribution",
+      "5": "Use phase",
+      "6": "End-of-life",
+      "7": "LCIA",
+      "8": "Interpretation",
+      "9": "Critical Review",
+      "10": "Compliance"
+    }
+  },
+  "wizardNav": {
+    "backToProduct": "Back to product",
+    "progress": "Progress",
+    "stepOf": "Step {step} of 10 —",
+    "saving": "Saving...",
+    "savedNow": "Saved just now",
+    "savedSeconds": "Saved {seconds}s ago",
+    "savedMinute": "Saved 1 minute ago",
+    "savedMinutes": "Saved {minutes} minutes ago",
+    "back": "Back",
+    "save": "Save",
+    "saveAndContinue": "Save and continue",
+    "viewCompliance": "View compliance"
+  },
+  "dqi": {
+    "title": "Data Quality (Pedigree matrix)",
+    "subtitle": "1 = Very low, 5 = Very high",
+    "reliability": "Reliability",
+    "reliabilityDesc": "Source credibility",
+    "completeness": "Completeness",
+    "completenessDesc": "Process coverage",
+    "temporal": "Temporal",
+    "temporalDesc": "Data recency",
+    "geographic": "Geographic",
+    "geographicDesc": "Match with your product",
+    "technological": "Technological",
+    "technologicalDesc": "Match with your technology",
+    "scores": {
+      "1": "Very low",
+      "2": "Low",
+      "3": "Medium",
+      "4": "High",
+      "5": "Very high"
+    }
+  },
+  "redFlag": {
+    "optional": "Optional",
+    "required": "Required",
+    "missing": "Missing",
+    "title": "Missing information",
+    "whyImportant": "Why it matters:",
+    "howToFind": "How to find this information:",
+    "impactLabel": "Impact:",
+    "critical": "Critical",
+    "high": "High",
+    "medium": "Medium",
+    "low": "Low"
+  },
+  "complianceCheck": {
+    "title": "Compliance Check",
+    "subtitle": "Automatic validation against ISO 14044's 15 mandatory elements.",
+    "score": "{fulfilled} of {total} mandatory requirements met",
+    "generateReport": "Generate report",
+    "checklist": "ISO 14044 Checklist (15 elements)",
+    "fulfilled": "Fulfilled",
+    "missing": "Missing",
+    "optional": "Optional",
+    "ready": "Ready for report generation",
+    "good": "Good progress — continue wizard to fill in remaining fields",
+    "low": "Missing data in several key sections — start at step 1",
+    "generateDraft": "Generate report draft",
+    "compareLevel": "Compare with ambition level",
+    "achieved": "Achieved",
+    "missing_pct": "{pct}% missing",
+    "requires": "Requires min. {min}% compliance",
+    "items": {
+      "purpose": "Study purpose documented",
+      "fu": "Functional unit defined and quantified",
+      "boundary": "System boundaries defined",
+      "cutoff": "Cut-off criterion defined",
+      "allocation": "Allocation method chosen and justified",
+      "lciRaw": "Raw materials and input flows documented",
+      "lciProdEnergy": "Production energy and processes documented",
+      "lciProdEmit": "Direct production emissions (VOC, NOx, etc.)",
+      "lciDist": "Distribution transport legs documented",
+      "lciUse": "Use-phase behaviour assumptions documented",
+      "lciEolRecovery": "End-of-life recovery assumptions documented",
+      "lciEolTakeback": "Take-back / WEEE registration documented",
+      "lciaMethod": "LCIA method chosen and justified",
+      "sensitivity": "Sensitivity analysis completed",
+      "conclusions": "Conclusions and limitations documented",
+      "lci": "LCI data registered for all phases",
+      "dqi": "Data sources and quality documented (DQI)",
+      "gwp": "GWP characterisation completed",
+      "review": "Critical review (if required)"
+    }
+  },
+  "report": {
+    "title": "LCA Report",
+    "subtitle": "Prepared in accordance with ISO 14040:2006 and ISO 14044:2006",
+    "toc": "Table of contents",
+    "exportPdf": "Export PDF",
+    "rewrite": "Rewrite",
+    "editBtn": "Edit",
+    "saveChanges": "Save changes",
+    "cancel": "Cancel",
+    "prevSection": "← Previous section",
+    "nextSection": "Next section →",
+    "sections": {
+      "executive_summary": "Executive Summary",
+      "goal_scope": "Goal & Scope",
+      "lci_raw": "LCI: Raw materials",
+      "lci_production": "LCI: Production",
+      "lci_distribution": "LCI: Distribution",
+      "lci_use": "LCI: Use phase",
+      "lci_eol": "LCI: End-of-life",
+      "lcia": "LCIA: Environmental impact",
+      "interpretation": "Interpretation",
+      "conclusion": "Conclusion"
+    }
+  },
+  "wizardStepContent": {
+    "step1": {
+      "title": "Step 1: Goal & Scope",
+      "subtitle": "Define the purpose, functional unit and system boundaries for your LCA.",
+      "basicInfo": "Basic information",
+      "purposeLabel": "LCA purpose",
+      "purposeHelper": "ISO 14044 §4.2.2 requires the study purpose to be clearly described and communicated to stakeholders.",
+      "purposePlaceholder": "Describe the specific decision this LCA is intended to support...",
+      "intendedAudience": "What is the primary reason for conducting this LCA?",
+      "audiences": { "design": "Internal design team", "customers": "Customers", "investors": "Investors", "authorities": "Authorities", "public": "General public", "censor": "External examiner" },
+      "comparativeAssertion": "Comparative Assertion",
+      "comparativeNote": "If yes → critical review required per ISO 14044 §6.3. Clearly marked in the report.",
+      "functionalUnit": "Functional unit",
+      "fuHelper": "The functional unit is the backbone of the entire LCA and makes results comparable across products.",
+      "fuPlaceholder": "Describe what the product PROVIDES to the user — not what it IS...",
+      "fuType": "Select type",
+      "fuTypes": { "time": "Time-based", "usage": "Usage-based", "output": "Output-based" },
+      "fuQuantity": "Quantity",
+      "fuUnit": "Unit",
+      "fuUnitPlaceholder": "e.g. pcs/year",
+      "fuTextPlaceholder": "e.g. 'Track one board game for one year with ≥85% data validity...'",
+      "referenceFlow": "Reference flow",
+      "rfHelper": "Auto-derived from FU — describe the physical quantity of products/components required",
+      "rfPlaceholder": "e.g. '850 QR labels per year + 1 admin tablet'",
+      "systemBoundaries": "System boundaries",
+      "boundaryType": "System boundary type",
+      "boundaryTypes": { "cradle_to_grave": "Raw material → EOL", "cradle_to_gate": "Raw material → factory gate", "cradle_to_gate_recycled": "Incl. circular recycling", "gate_to_gate": "Production process only", "gate_to_grave": "Production → EOL" },
+      "includedPhases": "Included phases",
+      "phases": { "raw_material": "Raw material", "production": "Production", "distribution": "Distribution", "use": "Use phase", "eol": "EOL", "recycling": "Recycling" },
+      "cutOff": "Cut-off criterion (%)",
+      "cutOffHelper": "Include all inputs contributing more than X% of total mass, energy or environmental impact.",
+      "allocationMethod": "Allocation method",
+      "allocationMethods": { "avoid": "1. Avoid allocation", "avoidDesc": "Preferred (ISO 14044 hierarchy)", "expand": "2. System expansion", "expandDesc": "Expand system boundary to avoid allocation", "physical": "3. Physical allocation", "physicalDesc": "Based on mass, energy or other physical criterion", "economic": "4. Economic allocation", "economicDesc": "Based on market value — only as last resort" },
+      "recommended": "Recommended",
+      "ambitionLevel": "Ambition level",
+      "ambitions": { "SCREENING": "Quick overview analysis, fewer data requirements", "DETAILED": "Full ISO 14044 data coverage", "CRITICAL_REVIEWED": "External review required", "EPD_VERIFIED": "Ready for official EPD publication" },
+      "advancedSettings": "Advanced settings",
+      "geographicScope": "Geographic scope",
+      "geoPlaceholder": "e.g. 'Denmark' or 'Global supply chain → EU'",
+      "timePeriod": "Time period",
+      "timePlaceholder": "e.g. '2026-2027' or '2026-2031 (5-year scope)'",
+      "limitations": "Limitations and caveats",
+      "limitationsPlaceholder": "What is NOT covered by this LCA? Which assumptions may have a major influence?"
+    },
+    "step2": {
+      "title": "Step 2: Raw materials",
+      "subtitle": "Register all materials and components included in the product.",
+      "material": "Material {n}",
+      "remove": "Remove",
+      "nameLabel": "Material name",
+      "nameHelper": "Each material must be precisely identified with trade name and supplier specification.",
+      "namePlaceholder": "Use the chemical or trade name. Refer to the supplier's product specification.",
+      "quantityLabel": "Quantity per FU",
+      "quantityHelp": "Enter the quantity per functional unit (FU). Example: 1 product = sum of all materials. Find data from Bill of Materials (BOM), drawings or supplier specifications. Conversion: 1 tonne = 1000 kg, 1 litre water ≈ 1 kg.",
+      "unit": "Unit",
+      "typeLabel": "Material type",
+      "types": { "primary": "Primary", "secondary": "Secondary (recycled)", "biobased": "Bio-based" },
+      "originLabel": "Country of origin",
+      "originPlaceholder": "e.g. 'Denmark', 'China', 'Global'",
+      "sourceTypeLabel": "Source type",
+      "sourceTypes": { "measurement": "Measurement", "supplier": "Supplier data", "literature": "Literature", "assumption": "Assumption", "expert": "Expert judgement" },
+      "sourceDetailLabel": "Source details",
+      "sourceDetailHelper": "Provide URL, citation, supplier name or database UUID",
+      "emissionLabel": "CO₂-eq per unit",
+      "emissionHelper": "kg CO₂-eq per unit — from database or supplier",
+      "recycledContent": "Recycled content %",
+      "recycledHelper": "Percentage of the material originating from recycled input (0-100%). E.g. PET bottle with 30% post-consumer recycled = 30. Find data in the supplier's Environmental Product Declaration (EPD) or material certificate.",
+      "addMaterial": "Add another material"
+    },
+    "step3": {
+      "title": "Step 3: Production",
+      "subtitle": "Register energy consumption, processes and emissions in the production phase.",
+      "process": "Process {n}",
+      "remove": "Remove",
+      "processName": "Process name",
+      "location": "Location",
+      "locationPlaceholder": "e.g. 'Denmark', 'Taiwan'",
+      "energy": "Energy consumption (kWh per FU)",
+      "energyHelper": "kWh consumed in the process per functional unit. Read from electricity meter or energy bill ÷ units produced. Example: factory uses 50,000 kWh/month producing 10,000 units → 5 kWh/unit. Conversion: 1 MJ = 0.278 kWh.",
+      "energySource": "Energy source",
+      "energySources": { "dk": "DK electricity mix", "tw": "TW electricity mix (high coal share)", "de": "DE electricity mix", "solar": "Solar energy", "wind": "Wind energy", "gas": "Natural gas", "coal": "Coal" },
+      "addProcess": "Add another process",
+      "resourcesTitle": "Resource consumption & emissions",
+      "waterLabel": "Water consumption (litres per FU)",
+      "waterHelper": "Water consumption is an ISO 14044-recommended impact category. Contact the manufacturer for a per-product water account.",
+      "waterUnit": "Litres per FU",
+      "wasteLabel": "Waste and by-products",
+      "wastePlaceholder": "Describe waste and by-products and their treatment method",
+      "emissionsLabel": "Direct process emissions",
+      "emissionsHelper": "Direct process emissions (VOC, NOx, SO₂, PFC) contribute directly to air quality and climate impact. Check SDS sheets for chemicals used.",
+      "emissionsPlaceholder": "e.g. 'VOC: 0.5 g/L ink, NOx: not quantified'"
+    },
+    "step4": {
+      "title": "Step 4: Distribution",
+      "subtitle": "Register transport routes from production to end user.",
+      "leg": "Transport leg {n}",
+      "remove": "Remove",
+      "fromLabel": "From (city/country)",
+      "toLabel": "To (city/country)",
+      "toPlaceholder": "e.g. 'Denmark'",
+      "modeLabel": "Transport mode",
+      "modes": { "truck": "Truck", "rail": "Rail", "sea": "Sea", "air": "Air", "combined": "Combined" },
+      "distanceLabel": "Distance (km)",
+      "distanceHelper": "Road or sea distance in kilometres from shipping point to recipient. Use Google Maps for road freight or searates.com for sea freight. Example: DK to DE ≈ 600 km by road, DK to CN ≈ 20,000 km by sea.",
+      "weightLabel": "Cargo weight (kg per FU)",
+      "weightHelper": "Total weight of goods including packaging per functional unit. Find data from the logistics company's invoice or packing slip. Conversion: 1 pallet ≈ 15-25 kg tare packaging.",
+      "loadFactor": "Load factor (%)",
+      "loadFactorHelper": "Average load factor for the transport (0-100%). Full load = 100%, half loaded = 50%. EU average for truck ≈ 58%. Lower load factor = higher emission per kg-km.",
+      "addLeg": "Add transport leg",
+      "packagingTitle": "Distribution packaging",
+      "packagingMaterial": "Packaging material",
+      "packagingPlaceholder": "e.g. 'Cardboard', 'Foam plastic'",
+      "packagingWeight": "Quantity (kg per FU)",
+      "packagingRecyclable": "Packaging is recyclable"
+    },
+    "step5": {
+      "title": "Step 5: Use phase",
+      "subtitle": "Register energy consumption, lifetime and behavioural assumptions for the use phase.",
+      "lifetimeTitle": "Lifetime and energy consumption",
+      "lifetimeLabel": "Expected lifetime",
+      "lifetimeHelper": "Lifetime is critical for correctly normalising impact per functional unit. Use the manufacturer's warranty period + typical use from industry data.",
+      "lifetimeUnit": "years",
+      "energyLabel": "Energy consumption during use",
+      "energyHelper": "Average electricity consumption per year during normal use. Measure with an energy monitor (Kill A Watt) or use manufacturer specification (rated watts × use hours ÷ 1000 = kWh). Example: 10W × 8h/day × 365 days ÷ 1000 = 29.2 kWh/year.",
+      "energyUnit": "kWh/year",
+      "consumablesLabel": "Consumables during use",
+      "consumablesPlaceholder": "e.g. 'Label replacement every 1-2 years', 'AAA batteries x4 per year'",
+      "maintenanceLabel": "Maintenance",
+      "maintenancePlaceholder": "Frequency and type of maintenance",
+      "behaviorTitle": "User behaviour and assumptions",
+      "behaviorLabel": "User behaviour assumptions",
+      "behaviorHelper": "User behaviour can have a significant impact on use-phase impact. Describe typical usage patterns based on manufacturer data.",
+      "behaviorPlaceholder": "e.g. 'User assumed to own a smartphone (>92% of Danes over 16). 8h daily use.'",
+      "reboundLabel": "Rebound effects",
+      "reboundHelper": "Describes unintended increased consumption resulting from improved efficiency",
+      "reboundPlaceholder": "e.g. 'No rebound effects identified' or 'Energy savings may lead to increased use'"
+    },
+    "step6": {
+      "title": "Step 6: End-of-Life",
+      "subtitle": "Define how the product is managed at end of life. Percentages must sum to 100%.",
+      "total": "Total: {pct}%",
+      "totalValid": "✓ Correct",
+      "totalInvalid": "— missing {remaining}% (must sum to 100%)",
+      "routes": { "reuse": "Reuse", "recycling": "Recycling", "energy": "Energy recovery (incineration)", "landfill": "Landfill", "other": "Other" },
+      "disassembly": "Product is designed for disassembly",
+      "disassemblyNote": "Easier disassembly significantly improves recycling rates",
+      "disassemblyDesc": "Describe design-for-disassembly",
+      "disassemblyPlaceholder": "e.g. 'Snap-fit connections without glue, standard screws, material labelling'",
+      "assumptionsTitle": "Assumptions and take-back",
+      "recoveryRateHelper": "Percentage actually recovered (0-100%). Find data in Statistics Denmark, Circular Economy report for your sector, or use EU Waste Framework Directive averages. Plastic in DK: ~30%, Paper/cardboard: ~70%, Metal: ~80-95%.",
+      "assumptionsLabel": "Recovery-rate assumptions",
+      "assumptionsHelper": "EOL assumptions must be based on actual systems. Use Danish/EU waste statistics for your product category.",
+      "assumptionsPlaceholder": "e.g. 'Based on Danish waste statistics 2024' or 'Conservative: product assumed to follow user to bin'",
+      "takebackLabel": "Is there a producer responsibility/take-back system?",
+      "takebackPlaceholder": "e.g. 'WEEE registered', 'Supplier take-back via ReturnBox', 'None'"
+    },
+    "step7": {
+      "title": "Step 7: LCIA configuration",
+      "subtitle": "Select LCIA method and impact categories.",
+      "recommended": "Recommended",
+      "methodDescs": {
+        "ReCiPe2016": "Most widely used international method. Covers 18 midpoint + 3 endpoint categories.",
+        "CML2002": "European standard, widely used in academic and industrial LCA.",
+        "TRACI": "Required for the US market.",
+        "EF31": "Required for EU-PEF and green procurement.",
+        "ILCD": "EU JRC recommended method for European products.",
+        "GWP_only": "Climate impact only (carbon footprint). Based on IPCC AR6 (2021)."
+      },
+      "categoriesHelper": "GWP is mandatory. Select additional categories relevant to your product.",
+      "gwpRequired": "Required",
+      "normalizationTitle": "Normalisation and weighting",
+      "normalizationLabel": "Normalisation",
+      "normalizationHelper": "Optional ISO element. Relates results to a reference system (e.g. European average).",
+      "weightingLabel": "Weighting",
+      "weightingHelper": "Optional ISO element — only where explicitly justified. ⚠️ ISO 14044 warns against over-interpretation of weighted results."
+    },
+    "step8": {
+      "title": "Step 8: Interpretation",
+      "subtitle": "Identify hotspots, run sensitivity analysis and document conclusions.",
+      "lciaTitle": "Calculated LCIA result",
+      "gwp": "GWP (climate impact)",
+      "gwpUnit": "kg CO₂-eq per FU",
+      "water": "Water consumption",
+      "waterUnit": "kg per FU",
+      "resources": "Resource consumption",
+      "sensitivityTitle": "Sensitivity analysis",
+      "sensitivityParams": "Select key parameters (3-5 recommended)",
+      "sensitivityParams_list": "lifetime / recycling rate / use-phase energy / material quantities",
+      "sensitivityResult": "Sensitivity analysis result",
+      "sensitivityPlaceholder": "e.g. 'Conclusion robust for lifetime ±50%; electricity mix has the greatest influence'",
+      "conclusionsTitle": "Conclusions and recommendations",
+      "conclusionsLabel": "Conclusions",
+      "conclusionsHelper": "What does the LCA show concretely? Use quantitative figures from the results.",
+      "conclusionsPlaceholder": "e.g. 'Product A has 40x lower GWP than alternative B, primarily driven by material choices in the raw material phase...'",
+      "recommendationsLabel": "Recommendations",
+      "recommendationsPlaceholder": "e.g. 'Prioritise recycled materials in the raw material phase. Increase EOL take-back.'",
+      "limitationsLabel": "Limitations",
+      "limitationsHelper": "What does the LCA NOT cover? What are the central uncertainties?",
+      "limitationsPlaceholder": "e.g. 'The user's smartphone is not included. Real-world adoption rate assumed to be 100%.'"
+    },
+    "step9": {
+      "title": "Step 9: Critical Review",
+      "notRequired": "Not required at current ambition level",
+      "required": "Critical review required at ambition level",
+      "updateNote": "Update ambition level in step 1 to activate.",
+      "configure": "Configure your ISO 14071-based review process.",
+      "reviewTypes": {
+        "internal": "Internal review (peer)",
+        "internalDesc": "Internal colleague with LCA experience",
+        "external_single": "External single reviewer",
+        "externalSingleDesc": "External LCA specialist",
+        "expert_panel": "Expert panel (3 reviewers)",
+        "expertPanelDesc": "Required for public comparative claims (ISO 14044 §6.3)"
+      },
+      "reviewerName": "Reviewer name",
+      "reviewerNamePlaceholder": "Full name",
+      "notStarted": "Not started"
+    },
+    "step10": {
+      "title": "Step 10: Compliance Check",
+      "subtitle": "Automatic validation against ISO 14044's 15 mandatory elements.",
+      "score": "{fulfilled} of {total} mandatory requirements met",
+      "generateReport": "Generate report",
+      "checklist": "ISO 14044 Checklist (15 elements)",
+      "optional": "Optional"
+    }
+  },
+  "exportReport": {
+    "title": "Export report",
+    "formatTitle": "Choose report format",
+    "recommended": "Recommended",
+    "requiresEpd": "Requires EPD level",
+    "requiresScenarios": "Requires scenarios",
+    "languageTitle": "Report language",
+    "danish": "Danish",
+    "english": "English",
+    "advancedTitle": "Advanced options",
+    "includeAppendices": "Include appendices (LCI tables, DQI matrix, sensitivity analysis)",
+    "showDqi": "Show DQI pedigree matrix in report",
+    "anonymize": "Anonymise company names",
+    "generateBtn": "Generate PDF",
+    "documentIdHint": "verifiable at lca-compass.dk",
+    "currentStampId": "Current seal ID: #{id} (kept when updating)",
+    "newVersionLabel": "New official document version (new seal ID)",
+    "generateError": "Could not generate the PDF. Restart the dev server (npm run dev) and run: npx prisma migrate deploy",
+    "generating": "Generating PDF...",
+    "downloadAgain": "PDF downloaded! Generate again",
+    "successTitle": "PDF generated!",
+    "successDesc": "ISO 14044-structured report downloaded to your computer.",
+    "formats": {
+      "ISO_14044_FULL": { "title": "ISO 14044 Full Report", "desc": "Complete ISO 14044-structured LCA report with all sections, appendices and TOC" },
+      "EPD_ISO_14025": { "title": "EPD (ISO 14025)", "desc": "Environmental Product Declaration — requires EPD-verified ambition level" },
+      "CARBON_FOOTPRINT_14067": { "title": "Carbon Footprint (ISO 14067)", "desc": "Climate impact (GWP) only — for CO₂ reporting and communication" },
+      "COMPARATIVE_ASSERTION": { "title": "Comparative Assertion", "desc": "Comparison of 2+ scenarios — requires minimum 2 scenarios" }
+    }
+  }
+}

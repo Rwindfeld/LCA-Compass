@@ -1,0 +1,188 @@
+@import "tailwindcss";
+
+@theme {
+  /* ── Compass Color Palette ── */
+  --color-forest-deep: #1F3A2F;
+  --color-moss: #4A6B5C;
+  --color-sage-mist: #B8C5B0;
+  --color-brass: #C9A961;
+  --color-bone: #F5F1E8;
+  --color-parchment: #EDE5D3;
+  --color-charcoal: #1A1A1A;
+  --color-ink: #3A3A3A;
+  --color-coral: #E07856;
+  --color-amber-warn: #D4A04C;
+  --color-verified: #5A8A6B;
+  --color-ink-blue: #2C3E50;
+
+  /* ── Typography ── */
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* ── Display Font Sizes ── */
+  --font-size-display-2xl: 4.5rem;
+  --line-height-display-2xl: 1.05;
+  --letter-spacing-display-2xl: -0.03em;
+
+  --font-size-display-xl: 3.5rem;
+  --line-height-display-xl: 1.1;
+  --letter-spacing-display-xl: -0.02em;
+
+  --font-size-display-lg: 2.5rem;
+  --line-height-display-lg: 1.15;
+  --letter-spacing-display-lg: -0.02em;
+
+  /* ── Shadows ── */
+  --shadow-compass: 0 4px 24px -8px rgba(31, 58, 47, 0.15), 0 2px 8px -2px rgba(31, 58, 47, 0.1);
+  --shadow-compass-lg: 0 12px 48px -12px rgba(31, 58, 47, 0.25), 0 4px 16px -4px rgba(31, 58, 47, 0.15);
+  --shadow-brass-glow: 0 0 0 1px #C9A961, 0 4px 16px -4px rgba(201, 169, 97, 0.4);
+
+  /* ── Animations ── */
+  --animate-compass-spin: compass-spin 2s ease-in-out infinite;
+  --animate-needle-wobble: needle-wobble 4s ease-in-out infinite;
+  --animate-fade-up: fade-up 0.6s ease-out;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-marquee: marquee 30s linear infinite;
+}
+
+@keyframes compass-spin {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+}
+
+@keyframes needle-wobble {
+  0%, 100% { transform: rotate(-3deg); }
+  50% { transform: rotate(3deg); }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ── Base Styles ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, sans-serif;
+  background-color: var(--color-bone);
+  color: var(--color-charcoal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Focus Styles ── */
+:focus-visible {
+  outline: 2px solid var(--color-brass);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ── Scrollbar Styling ── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-parchment);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-sage-mist);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-moss);
+}
+
+/* ── Prose / Rich Text ── */
+.prose-lca {
+  max-width: 65ch;
+  line-height: 1.75;
+}
+
+.prose-lca h2 {
+  font-family: var(--font-display);
+  color: var(--color-forest-deep);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-lca h3 {
+  font-family: var(--font-display);
+  color: var(--color-moss);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-lca p {
+  margin-bottom: 1rem;
+  color: var(--color-ink);
+}
+
+/* ── Cursor Blink ── */
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+  color: var(--color-brass);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ── Grid Pattern Background ── */
+.bg-grid-pattern {
+  background-image: radial-gradient(circle, var(--color-sage-mist) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Skip to content ── */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-forest-deep);
+  color: var(--color-bone);
+  border-radius: 0 0 0.5rem 0.5rem;
+  font-weight: 600;
+  z-index: 9999;
+  transition: top 0.2s;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}

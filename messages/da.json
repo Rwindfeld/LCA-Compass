@@ -1,0 +1,1145 @@
+{
+  "common": {
+    "loading": "Indlæser...",
+    "save": "Gem",
+    "cancel": "Annuller",
+    "delete": "Slet",
+    "edit": "Rediger",
+    "back": "Tilbage",
+    "next": "Næste",
+    "saveAndContinue": "Gem og fortsæt",
+    "required": "Påkrævet",
+    "optional": "Valgfrit",
+    "yes": "Ja",
+    "no": "Nej",
+    "search": "Søg",
+    "filter": "Filtrer",
+    "export": "Eksporter",
+    "generate": "Generer",
+    "view": "Se",
+    "open": "Åbn",
+    "duplicate": "Dupliker",
+    "new": "Ny"
+  },
+  "landing": {
+    "nav": {
+      "product": "Produkt",
+      "verify": "Verificer dokument",
+      "standards": "Standarder",
+      "about": "Om",
+      "login": "Log ind",
+      "getStarted": "Prøv det"
+    },
+    "verify": {
+      "eyebrow": "Officiel dokumentverifikation",
+      "title": "Slå et LCA-dokument-ID op",
+      "subtitle": "Verificer at en rapport er udstedt af LCA Compass med uændret data. ID'et findes på forsiden og i footeren på hvert officielt dokument.",
+      "inputLabel": "Dokument-ID",
+      "placeholder": "fx CLXY-1A2B",
+      "submit": "Vis officielt dokument",
+      "hint": "ID-format: XXXX-YYYY (fx det der står ved LCA Compass seglet på PDF'en).",
+      "trust": {
+        "seal": "LCA Compass officielt segl",
+        "data": "Data genereret i platformen",
+        "timestamp": "Udstedelsesdato registreret"
+      },
+      "errors": {
+        "invalid": "Ugyldigt dokument-ID. Tjek formatet (fx ABCD-1A2B).",
+        "notFound": "Intet dokument fundet med dette ID. Det kan være udløbet eller aldrig udstedt fra LCA Compass.",
+        "generic": "Kunne ikke verificere lige nu. Prøv igen."
+      },
+      "verifiedBadge": "Verificeret af LCA Compass",
+      "viewerTitle": "Officielt LCA-dokument",
+      "viewerSubtitle": "Dette dokument er registreret i LCA Compass. Indholdet nedenfor er det udstedte dokument — ikke en kopi fra tredjepart.",
+      "officialNotice": "Data og struktur stammer fra LCA Compass",
+      "back": "Tilbage til forsiden",
+      "print": "Udskriv / gem som PDF",
+      "iframeTitle": "LCA dokument {id}",
+      "meta": {
+        "id": "Dokument-ID",
+        "product": "Produkt",
+        "issued": "Udstedt",
+        "format": "Rapporttype"
+      }
+    },
+    "hero": {
+      "eyebrow": "ISO 14040/14044 · ISO 14025 EPD · ISO 14067 CFP",
+      "title": "Fra produkt-idé til officiel LCA-dokumentation — på under en time",
+      "subtitle": "LCA-Kompas guider dig gennem ISO 14044's krav skridt-for-skridt og genererer professionel PDF-dokumentation klar til publicering.",
+      "ctaPrimary": "Kom i gang",
+      "ctaSecondary": "Se demo med QR vs RFID",
+      "trustedBy": "Bruges af progressive designteams"
+    },
+    "problem": {
+      "title": "LCA er kompliceret. Indtil nu.",
+      "cards": {
+        "standards": {
+          "title": "ISO 14040/14044 er 100+ siders standarder",
+          "description": "Krav, definitioner og metoder spredt over to komplekse dokumenter."
+        },
+        "cost": {
+          "title": "Konsulenter koster 50.000-200.000 kr pr. analyse",
+          "description": "Høje konsulentomkostninger holder SMV'er ude af LCA-markedet."
+        },
+        "tools": {
+          "title": "Excel-skabeloner mangler validering",
+          "description": "Manglende automation og ISO-validering fører til fejl og inkonsistens."
+        }
+      }
+    },
+    "features": {
+      "title": "Alt du skal bruge til officiel LCA-dokumentation",
+      "items": {
+        "wizard": {
+          "title": "Guidet ISO 14040/14044-wizard",
+          "description": "10-step wizard der dækker alle ISO-krav med forklaringer undervejs."
+        },
+        "lcia": {
+          "title": "LCIA med ReCiPe, CML, TRACI, EF 3.1",
+          "description": "Vælg din LCIA-metode og få automatisk karakterisering."
+        },
+        "prose": {
+          "title": "AI-genereret professionel rapporttekst",
+          "description": "ISO-konform prosa der læser som menneskeskrevet teknisk dokumentation."
+        },
+        "dqi": {
+          "title": "Pedigree-matrix datakvalitet",
+          "description": "DQI-scoring på alle datapunkter med automatisk kvalitetsvurdering."
+        },
+        "review": {
+          "title": "Critical review-workflow",
+          "description": "ISO 14071-baseret review-proces med intern og ekstern reviewer-mulighed."
+        },
+        "pdf": {
+          "title": "PDF-eksport på dansk og engelsk",
+          "description": "ISO 14044-struktureret rapport klar til publicering og EPD-ansøgning."
+        }
+      }
+    },
+    "howItWorks": {
+      "title": "Fra blank side til EPD-klar i 4 trin",
+      "steps": {
+        "define": {
+          "title": "Definer mål",
+          "description": "Funktionel enhed, systemgrænser, scope"
+        },
+        "input": {
+          "title": "Indtast data",
+          "description": "5 livscyklus-faser, automatisk DQI-scoring"
+        },
+        "analyze": {
+          "title": "Analysér impact",
+          "description": "Vælg LCIA-metode, kør følsomhedsanalyse"
+        },
+        "export": {
+          "title": "Eksporter PDF",
+          "description": "ISO 14044-struktureret rapport på DK/EN"
+        }
+      }
+    },
+    "trustedBy": {
+      "label": "Designet til progressive designteams og produktudviklere"
+    },
+    "standards": {
+      "title": "Bygget på internationale standarder",
+      "subtitle": "LCA-Kompas dækker alle relevante ISO-standarder for officiel livscyklusdokumentation",
+      "readMore": "Læs mere",
+      "iso14040": { "name": "Principper og rammer", "description": "De overordnede principper og krav for gennemførelse af en LCA." },
+      "iso14044": { "name": "Krav og retningslinjer", "description": "Detaljerede krav til alle faser: mål & scope, LCI, LCIA, og fortolkning." },
+      "iso14025": { "name": "EPD — Type III", "description": "Krav til Type III-miljødeklarationer (EPD) til publikation og kommunikation." },
+      "iso14067": { "name": "Carbon Footprint", "description": "Principper og krav til kvantificering af produkters CO₂-fodaftryk." },
+      "iso14071": { "name": "Critical Review", "description": "Krav til gennemførelse af critical review-processer for LCA-studier." },
+      "en15978": { "name": "Byggeprodukter", "description": "Beregning af bygningers miljøpræstation — anvender ISO 14044." }
+    },
+    "comparison": {
+      "title": "Sammenlign dine muligheder",
+      "feature": "Funktion",
+      "consultant": "Konsulent",
+      "lcaTime": "<1 time",
+      "simaproTime": "Dage–uger",
+      "consultantTime": "Uger–måneder",
+      "excelTime": "Dage",
+      "rows": {
+        "time": "Tid til første rapport",
+        "iso": "ISO 14044-validering",
+        "guided": "Guidet workflow",
+        "ai": "AI-genereret rapport",
+        "pdf": "PDF-eksport",
+        "bilingual": "DK/EN rapporter",
+        "epd": "EPD-klar output",
+        "noExpert": "Ingen ekspertise nødvendig"
+      }
+    },
+    "cta": {
+      "title": "Klar til at give dit næste produkt en officiel LCA?",
+      "button": "Kom i gang med LCA-Kompas",
+      "subline": "100% gratis · Ingen kreditkort · ISO 14044-compliant"
+    }
+  },
+  "auth": {
+    "login": {
+      "title": "Log ind på LCA-Kompas",
+      "subtitle": "Vælg din foretrukne login-metode",
+      "continueWithGoogle": "Fortsæt med Google",
+      "continueWithMicrosoft": "Fortsæt med Microsoft",
+      "continueWithEmail": "Fortsæt med email",
+      "email": "Email",
+      "password": "Adgangskode",
+      "rememberMe": "Husk mig",
+      "forgotPassword": "Glemt adgangskode?",
+      "noAccount": "Har du ikke en konto?",
+      "createAccount": "Opret en",
+      "orDivider": "eller",
+      "signIn": "Log ind"
+    },
+    "signup": {
+      "title": "Opret din konto",
+      "subtitle": "Opret din konto og kom i gang",
+      "name": "Fulde navn",
+      "company": "Virksomhed (valgfrit)",
+      "email": "Email",
+      "password": "Adgangskode",
+      "createAccount": "Opret konto",
+      "alreadyHaveAccount": "Har du allerede en konto?",
+      "signIn": "Log ind"
+    }
+  },
+  "dashboard": {
+    "greeting": {
+      "morning": "God morgen",
+      "afternoon": "God eftermiddag",
+      "evening": "God aften"
+    },
+    "subtitle": "Du har {count} produkter under analyse",
+    "stats": {
+      "activeProducts": "Aktive produkter",
+      "avgCompliance": "Compliance score (gns)",
+      "epdReady": "EPD-klare",
+      "missingFields": "Manglende felter"
+    },
+    "quickActions": {
+      "newProduct": "Opret nyt produkt",
+      "newProductDesc": "Start en ny LCA fra bunden",
+      "compare": "Sammenlign produkter",
+      "compareDesc": "Side-om-side analyse af 2+ produkter",
+      "guide": "Lær LCA-krav og ISO",
+      "guideDesc": "Faglig introduktion og officielle standarder"
+    },
+    "quickActionsTitle": "Hurtige handlinger",
+    "recentProducts": "Seneste produkter",
+    "seeAll": "Se alle",
+    "activity": "Aktivitet",
+    "noProducts": "Ingen produkter endnu",
+    "createFirst": "Opret dit første produkt og start din LCA-rejse",
+    "open": "Åbn",
+    "colStatus": "Status",
+    "colCompliance": "Compliance",
+    "colUpdated": "Opdateret"
+  },
+  "products": {
+    "title": "Produkter",
+    "new": "Nyt produkt",
+    "search": "Søg produkter...",
+    "filter": "Filtrer",
+    "gridView": "Gitteroversigt",
+    "listView": "Listevisning",
+    "status": {
+      "DRAFT": "Kladde",
+      "IN_PROGRESS": "I gang",
+      "REVIEW_PENDING": "Afventer review",
+      "REVIEW_DONE": "Review færdig",
+      "EPD_READY": "EPD-klar",
+      "PUBLISHED": "Publiceret"
+    },
+    "type": {
+      "ELECTRONICS": "Elektronik",
+      "TEXTILE": "Tekstil",
+      "FURNITURE": "Møbel",
+      "FOOD": "Mad",
+      "PACKAGING": "Emballage",
+      "CONSTRUCTION": "Byggeprodukt",
+      "SOFTWARE_HARDWARE": "Software/hardware",
+      "OTHER": "Andet"
+    },
+    "ambition": {
+      "SCREENING": "Screening",
+      "DETAILED": "Detaljeret",
+      "CRITICAL_REVIEWED": "Critical reviewed",
+      "EPD_VERIFIED": "EPD verificeret"
+    },
+    "detail": {
+      "tabs": {
+        "overview": "Overblik",
+        "wizard": "Wizard",
+        "compliance": "Compliance",
+        "report": "Rapport",
+        "export": "Eksport",
+        "scenarios": "Scenarier",
+        "review": "Review"
+      },
+      "overview": {
+        "goalScope": "Mål & Scope",
+        "phasesProgress": "Faser-fremdrift",
+        "lciaResults": "LCIA-resultater",
+        "hotspots": "Hotspots",
+        "missingFields": "Manglende felter",
+        "nextStep": "Næste trin"
+      }
+    },
+    "open": "Åbn",
+    "totalCount": "produkter i alt",
+    "allStatuses": "Alle statusser",
+    "noResults": "Ingen resultater for \"{query}\"",
+    "tryOtherSearch": "Prøv en anden søgetekst eller ryd filteret",
+    "empty": {
+      "title": "Ingen produkter endnu",
+      "description": "Opret dit første produkt og start din LCA-rejse",
+      "cta": "Opret produkt"
+    },
+    "compareLink": "Sammenlign produkter",
+    "compare": {
+      "title": "Sammenlign produkter",
+      "subtitle": "Vælg to produkter og se nøgletal side om side",
+      "backToProducts": "← Alle produkter",
+      "productA": "Produkt A",
+      "productB": "Produkt B",
+      "choose": "Vælg produkt…",
+      "swap": "Byt produkter",
+      "sameProduct": "Vælg to forskellige produkter.",
+      "pickTwo": "Vælg produkt A og B for at starte sammenligningen.",
+      "needMoreProducts": "Du skal have mindst to produkter før du kan sammenligne.",
+      "metric": "Nøgletal",
+      "complianceLabel": "ISO 14044 compliance",
+      "notSet": "Ikke angivet",
+      "yes": "Udfyldt",
+      "no": "Mangler",
+      "deltaTitle": "Forskel (B − A)",
+      "gwpDelta": "GWP",
+      "gwpDeltaHint": "lavere er bedre",
+      "complianceDelta": "Compliance",
+      "openProduct": "Åbn {name}",
+      "rows": {
+        "type": "Produkttype",
+        "status": "Status",
+        "ambition": "Ambitionsniveau",
+        "compliance": "Compliance score",
+        "checklist": "ISO-tjekliste",
+        "functionalUnit": "Funktionel enhed",
+        "systemBoundaries": "Systemgrænser",
+        "geographicScope": "Geografisk scope",
+        "lciaMethod": "LCIA-metode",
+        "gwp": "GWP (klimapåvirkning)",
+        "eWaste": "E-waste",
+        "updated": "Sidst opdateret"
+      }
+    }
+  },
+  "wizard": {
+    "steps": {
+      "goalScope": "Mål & Scope",
+      "rawMaterial": "Råmateriale",
+      "production": "Produktion",
+      "distribution": "Distribution",
+      "use": "Brug",
+      "endOfLife": "End-of-life",
+      "lcia": "LCIA-konfiguration",
+      "interpretation": "Fortolkning",
+      "criticalReview": "Critical Review",
+      "compliance": "Compliance Check"
+    },
+    "autoSaved": "Gemt for {time} siden",
+    "saving": "Gemmer...",
+    "progress": "Trin {current} af {total}",
+    "fields": {
+      "productName": {
+        "label": "Produktnavn",
+        "placeholder": "fx 'QR-system til brætspilcafé'"
+      },
+      "productType": {
+        "label": "Produkttype"
+      },
+      "purpose": {
+        "label": "Formål med LCA",
+        "placeholder": "Hvad er den primære grund til at du laver denne LCA?"
+      },
+      "functionalUnit": {
+        "label": "Funktionel enhed",
+        "helper": "Den kvantificerede ydelse produktet leverer. Skal være målbar og specifik.",
+        "placeholder": "fx 'Spor ét brætspil i ét år med ≥85% datavaliditet'"
+      },
+      "systemBoundaries": {
+        "label": "Systemgrænser"
+      },
+      "allocationApproach": {
+        "label": "Allokeringsmetode"
+      }
+    },
+    "redFlag": {
+      "title": "Manglende oplysning",
+      "whyImportant": "Hvorfor det er vigtigt:",
+      "isoReference": "ISO-reference:",
+      "howToFind": "Sådan finder du informationen:",
+      "impact": "Impact:",
+      "markIrrelevant": "Markér som ikke-relevant",
+      "findData": "Find data"
+    }
+  },
+  "compliance": {
+    "title": "Compliance Check",
+    "score": "ISO 14044 Compliance Score",
+    "checklist": {
+      "title": "ISO 14044 Tjekliste",
+      "fulfilled": "Opfyldt",
+      "partial": "Delvis",
+      "missing": "Mangler"
+    },
+    "levels": {
+      "title": "Sammenlign med ambitionsniveau",
+      "screening": "Screening",
+      "detailed": "Detaljeret",
+      "criticalReviewed": "Critical reviewed",
+      "epdVerified": "EPD verificeret"
+    },
+    "generateReport": "Generer udkast til rapport"
+  },
+  "export": {
+    "title": "Eksporter rapport",
+    "formats": {
+      "iso14044": {
+        "name": "ISO 14044 Full Report",
+        "description": "Komplet ISO 14044-struktureret LCA-rapport",
+        "recommended": "Anbefalet"
+      },
+      "epd": {
+        "name": "EPD (ISO 14025)",
+        "description": "Environmental Product Declaration",
+        "requiresLevel": "Kræver EPD-verificeret niveau"
+      },
+      "carbon": {
+        "name": "Carbon Footprint (ISO 14067)",
+        "description": "Kun GWP/klimapåvirkning"
+      },
+      "comparative": {
+        "name": "Comparative Assertion",
+        "description": "Sammenligning af 2+ scenarier"
+      }
+    },
+    "language": "Rapportsprog",
+    "danish": "Dansk",
+    "english": "English",
+    "advanced": "Avancerede indstillinger",
+    "includeAppendices": "Inkluder bilag",
+    "anonymize": "Anonymiser virksomhedsnavne",
+    "showDqi": "Vis DQI-pedigree-matrix",
+    "generatePdf": "Generer PDF",
+    "generating": "Genererer PDF..."
+  },
+  "footer": {
+    "tagline": "Fra produkt-idé til officiel ISO 14044-dokumentation.",
+    "product": "Produkt",
+    "features": "Features",
+    "demo": "Se demo",
+    "standards": "Standarder",
+    "resources": "Ressourcer",
+    "isoGuide": "LCA-krav og ISO",
+    "documentation": "Dokumentation",
+    "company": "Virksomhed",
+    "about": "Om os",
+    "contact": "Kontakt",
+    "privacy": "Privatlivspolitik",
+    "terms": "Handelsbetingelser"
+  },
+  "nav": {
+    "dashboard": "Dashboard",
+    "products": "Produkter",
+    "reports": "Rapporter",
+    "settings": "Indstillinger",
+    "newProduct": "Nyt produkt",
+    "report": "Rapport",
+    "export": "Eksport",
+    "searchProducts": "Søg produkter...",
+    "searchLoading": "Søger...",
+    "searchNoResults": "Ingen produkter fundet",
+    "searchViewAll": "Vis alle resultater for \"{query}\"",
+    "notifications": "Notifikationer",
+    "signOut": "Log ud",
+    "compare": "Sammenlign",
+    "guide": "LCA & ISO"
+  },
+  "guide": {
+    "title": "Lær LCA-krav og ISO",
+    "subtitle": "Faglig introduktion til livscyklusvurdering (LCA) og de internationale standarder, som LCA Compass bygger på.",
+    "backToDashboard": "← Dashboard",
+    "disclaimer": "Links peger på officielle udgivere (ISO, CEN, EU). Fulde standardtekster er typisk licensbaserede og købes via ISO eller nationalt standardinstitut (fx Dansk Standard).",
+    "whatIsLca": {
+      "title": "Hvad er LCA?",
+      "p1": "Livscyklusvurdering (Life Cycle Assessment, LCA) er en systematisk metode til at kvantificere et produkts miljøpåvirkninger fra vugge til grav — eller inden for de systemgrænser, studiet definerer. Metoden identificerer materiale- og energistrømme, omregner dem til miljøpåvirkningsindikatorer (fx klimapåvirkning, ressourceforbrug) og fortolker resultaterne i forhold til studiets mål.",
+      "p2": "LCA er ikke et enkelt tal, men en struktureret beslutningsproces: mål og scope fastlægger, hvad der måles og for hvem; livscyklusinventaret (LCI) dokumenterer inputs og outputs; livscykluspåvirkningsvurderingen (LCIA) kobler data til påvirkningskategorier; fortolkning vurderer usikkerhed, følsomhed og begrænsninger. Resultater skal altid rapporteres med metode, antagelser og datakvalitet.",
+      "p3": "I Europa anvendes LCA i produktregulering, grøn indkøb, EPD-programmer og virksomheders klimaregnskaber. ISO 14040 og ISO 14044 er de centrale internationale referencestandarder for, hvordan studier planlægges, gennemføres og dokumenteres.",
+      "phasesTitle": "De fire LCA-faser (ISO 14040/14044)",
+      "phases": {
+        "goalScope": {
+          "title": "Mål og scope",
+          "desc": "Formål, funktionel enhed, systemgrænser, allokering og kvalitetskrav til data."
+        },
+        "inventory": {
+          "title": "Livscyklusinventar (LCI)",
+          "desc": "Dataindsamling for råmaterialer, produktion, transport, brug og end-of-life."
+        },
+        "impact": {
+          "title": "Livscykluspåvirkningsvurdering (LCIA)",
+          "desc": "Valg af LCIA-metode og beregning af påvirkningskategorier (fx GWP, eutrofiering)."
+        },
+        "interpretation": {
+          "title": "Fortolkning",
+          "desc": "Følsomhed, usikkerhed, begrænsninger, konklusioner og anbefalinger."
+        }
+      }
+    },
+    "standardsTitle": "Officielle standarder og dokumenter",
+    "standardsIntro": "Nedenfor er de vigtigste normative referencer for produkt-LCA, EPD og fodaftryk. Hvert link fører til den officielle standardbeskrivelse hos udgiveren.",
+    "roleLabel": "Rolle i LCA-arbejdet",
+    "officialDocument": "Se officielt dokument hos udgiver",
+    "freeAccess": "Gratis adgang",
+    "openResource": "Åbn ressource",
+    "supplementaryIntro": "Supplerende, offentligt tilgængelige vejledninger som mange praktikere bruger sammen med ISO-standarderne.",
+    "startLca": "Start en LCA i LCA Compass",
+    "categories": {
+      "core": "Kerne-LCA (ISO 14040/14044)",
+      "declarations": "Miljødeklarationer og PCR",
+      "footprints": "Fodaftryk (klima, vand m.m.)",
+      "review": "Kvalitetssikring og review",
+      "organizational": "Organisatorisk LCA",
+      "supplementary": "Supplerende ressourcer (gratis)"
+    },
+    "standards": {
+      "iso14040": {
+        "name": "Principper og ramme",
+        "description": "Definerer principper, begreber og den overordnede ramme for LCA og LCI-studier.",
+        "role": "Fundament for alle produkt-LCA'er — beskriver faserne og hvordan de hænger sammen."
+      },
+      "iso14044": {
+        "name": "Krav og retningslinjer",
+        "description": "Operativ standard med krav til mål/scope, LCI, LCIA, fortolkning, rapportering og valgfrie elementer.",
+        "role": "Det LCA Compass validerer mod — tjekliste og rapportstruktur følger ISO 14044."
+      },
+      "iso14025": {
+        "name": "Type III-miljødeklarationer (EPD)",
+        "description": "Principper og procedurer for Type III-deklarationer baseret på LCA.",
+        "role": "Grundlag for EPD-programmer og offentlig kommunikation af LCA-resultater."
+      },
+      "iso14027": {
+        "name": "Produktkategoriregler (PCR)",
+        "description": "Krav til udvikling, review og registrering af PCR i EPD- og fodaftryksprogrammer.",
+        "role": "Sikrer sammenlignelighed mellem EPD'er inden for samme produktkategori."
+      },
+      "iso14026": {
+        "name": "Kommunikation af fodaftryksinformation",
+        "description": "Principper for gennemsigtig kommunikation af miljøfodaftryk for produkter.",
+        "role": "Relevant når LCA-resultater kommunikeres som fodaftryk ud over fuld EPD."
+      },
+      "iso14067": {
+        "name": "Produktets klimafodaftryk (CFP)",
+        "description": "Krav til kvantificering og kommunikation af produkters greenhouse gas-emissioner med LCA-metode.",
+        "role": "Anvendes til CO₂-fodaftryk rapporter; bygger på ISO 14040/14044 med fokus på GWP."
+      },
+      "iso14046": {
+        "name": "Vandfodaftryk",
+        "description": "Principper og krav til vandfodaftryk for produkter, processer og organisationer.",
+        "role": "Supplerende påvirkningsdimension når vandforbrug/-belastning skal dokumenteres."
+      },
+      "iso14071": {
+        "name": "Critical review",
+        "description": "Krav og vejledning til critical review af LCA, inkl. kompetencer for reviewere.",
+        "role": "Påkrævet ved comparative assertions og anbefalet ved EPD og ekstern publicering."
+      },
+      "iso14072": {
+        "name": "Organisatorisk LCA (O-LCA)",
+        "description": "Yderligere krav til anvendelse af ISO 14040/14044 på organisationsniveau.",
+        "role": "Relevant for virksomheders samlede miljøprofil — ikke enkeltprodukt-LCA."
+      },
+      "en15804": {
+        "name": "Sustainability of construction works — EPD",
+        "description": "Europæisk standard for EPD af byggevarer; core PCR for bygge- og anlægssektoren.",
+        "role": "Ofte påkrævet for byggeprodukter i EU; kobler til ISO 14025 og EN 15804+A2."
+      }
+    },
+    "resources": {
+      "ilcd": {
+        "title": "ILCD Handbook (EU JRC)",
+        "description": "European Commission's officielle LCA-vejledning: dataguidance, kvalitet, review og reporting — bredt anvendt i EU."
+      },
+      "pef": {
+        "title": "Product Environmental Footprint (PEF)",
+        "description": "EU's metode og regler for produktmiljøfodaftryk — relevant for markedskrav og policy i EU."
+      }
+    }
+  },
+  "settings": {
+    "title": "Indstillinger",
+    "profile": "Profil",
+    "company": "Virksomhed",
+    "language": "Sprog",
+    "notifications": "Notifikationer",
+    "api": "API-nøgler",
+    "save": "Gem ændringer",
+    "fullName": "Fulde navn",
+    "email": "Email",
+    "emailReadOnly": "Email kan ikke ændres i demo-mode",
+    "companyName": "Virksomhedsnavn",
+    "appLanguage": "App-sprog",
+    "languageNote": "Rapport-sproget vælges separat ved PDF-eksport og påvirker ikke app-sproget.",
+    "active": "Aktiv",
+    "apiNote": "Skift til Google Gemini gratis AI ved at sætte AI_PROVIDER=gemini og GEMINI_API_KEY i din .env fil.",
+    "notAvailableInDemo": "Disse indstillinger er ikke tilgængelige i demo-versionen"
+  },
+  "productMembers": {
+    "title": "Team på produktet",
+    "subtitle": "Inviter kolleger — de får kun adgang til dette produkt (wizard, data, rapport).",
+    "prototypeBadge": "Prototype",
+    "prototypeNote": "Ingen e-mail sendes i denne demo. Brug «Kopiér link» og åbn invitations-siden for at vise flowet til censoren.",
+    "emailPlaceholder": "kollega@firma.dk",
+    "invite": "Inviter",
+    "empty": "Ingen inviterede endnu.",
+    "copyLink": "Kopiér link",
+    "copied": "Kopieret",
+    "preview": "Forhåndsvis",
+    "remove": "Fjern",
+    "role": {
+      "EDITOR": "Kan redigere",
+      "VIEWER": "Kan se"
+    },
+    "status": {
+      "PENDING": "Invitation sendt",
+      "ACTIVE": "Har adgang"
+    }
+  },
+  "inviteAccept": {
+    "title": "Invitation til LCA-produkt",
+    "invitedTo": "Du er inviteret til at arbejde på",
+    "email": "E-mail",
+    "access": "Adgang",
+    "accessDesc": "Kun dette produkt — wizard, data og rapporter",
+    "prototypeBadge": "Prototype",
+    "prototypeNote": "I en fuld version logger du ind med din e-mail. Her kan du acceptere invitationen som demo.",
+    "acceptDemo": "Acceptér invitation (demo)",
+    "accepted": "Invitation accepteret",
+    "openProduct": "Åbn produktet",
+    "notFound": "Invitationen findes ikke eller er udløbet.",
+    "backDashboard": "Tilbage til dashboard"
+  },
+  "newProduct": {
+    "title": "Opret nyt produkt",
+    "subtitle": "Udfyld grundinformation for at starte LCA-wizard'en",
+    "nameLabel": "Produktnavn",
+    "namePlaceholder": "fx 'QR-system til brætspilcafé', 'Bambus-stol model A'",
+    "typeLabel": "Produkttype",
+    "descLabel": "Beskrivelse",
+    "descPlaceholder": "Kort beskrivelse af produktet og dets primære funktion...",
+    "ambitionLabel": "Ambitionsniveau",
+    "creating": "Opretter produkt...",
+    "startWizard": "Start LCA Wizard",
+    "required": "Påkrævet",
+    "optional": "Valgfrit",
+    "inviteLabel": "Inviter medarbejdere",
+    "inviteHint": "Prototype: ingen rigtig e-mail — du får et invitationslink til censoren.",
+    "invitePlaceholder": "fx kollega@firma.dk, leverandor@mail.dk",
+    "types": {
+      "ELECTRONICS": "Elektronik",
+      "SOFTWARE_HARDWARE": "Software/hardware",
+      "TEXTILE": "Tekstil",
+      "FURNITURE": "Møbel",
+      "FOOD": "Mad & Drikke",
+      "PACKAGING": "Emballage",
+      "CONSTRUCTION": "Byggeprodukt",
+      "OTHER": "Andet"
+    },
+    "ambitions": {
+      "SCREENING": { "label": "Screening", "desc": "Hurtigt overblik" },
+      "DETAILED": { "label": "Detaljeret", "desc": "Fuld ISO 14044-dækning" },
+      "CRITICAL_REVIEWED": { "label": "Critical reviewed", "desc": "Ekstern reviewer" },
+      "EPD_VERIFIED": { "label": "EPD verificeret", "desc": "Officiel EPD" }
+    }
+  },
+  "productDetail": {
+    "tabs": {
+      "overview": "Overblik",
+      "wizard": "Wizard",
+      "compliance": "Compliance",
+      "report": "Rapport",
+      "export": "Eksport",
+      "scenarios": "Scenarier",
+      "review": "Review"
+    },
+    "exportPdf": "Eksporter PDF",
+    "edit": "Rediger",
+    "open": "Åbn",
+    "backToProducts": "Produkter",
+    "phases": {
+      "raw_material": "Råmateriale",
+      "production": "Produktion",
+      "distribution": "Distribution",
+      "use": "Brug",
+      "end_of_life": "End-of-life"
+    },
+    "overview": {
+      "goalScope": "Mål & Scope",
+      "editLink": "Rediger →",
+      "functionalUnit": "Funktionel enhed",
+      "systemBoundaries": "Systemgrænser",
+      "geographicScope": "Geografisk scope",
+      "notFilledYet": "Ikke udfyldt endnu",
+      "phaseProgress": "Faser-fremdrift",
+      "lciaResults": "LCIA-resultater",
+      "gwp": "GWP (klimapåvirkning)",
+      "lciaNotConfigured": "LCIA ikke konfigureret endnu",
+      "hotspots": "Top hotspots",
+      "missingFields": "{count} manglende felter",
+      "nextStep": "Næste trin",
+      "continueWizard": "Fortsæt wizard for at øge din compliance-score",
+      "continueWizardBtn": "Fortsæt wizard",
+      "reportTitle": "Rapport",
+      "reportDesc": "Generer AI-baseret rapporttekst til alle sektioner",
+      "openReport": "Åbn rapport-viewer",
+      "exportTitle": "Eksport",
+      "exportDesc": "Eksporter rapporten som ISO 14044-struktureret PDF",
+      "goToExport": "Gå til eksport",
+      "scenariosTitle": "Scenarier",
+      "scenariosDesc": "Opret alternative scenarier til sensitivity-analyse og sammenligning",
+      "reviewNote": "Critical review kræves ved ambitionsniveau 3 (Critical reviewed) eller 4 (EPD verified).",
+      "configureReview": "Konfigurer din critical review-proces (ISO 14071)",
+      "complianceReady": "Klar til rapport-generering",
+      "complianceGood": "God fremdrift — udfyld manglende felter",
+      "complianceLow": "Mangler data i flere nøgle-sektioner",
+      "viewChecklist": "Se fuld compliance-checkliste",
+      "checklistMeta": "ISO 14044 — {total} krav ({fulfilled} opfyldt)"
+    },
+    "scenarios": {
+      "title": "Scenarier og sensitivity",
+      "subtitle": "Opret alternative antagelser og sammenlign GWP med baseline — til ISO 14044 fortolkning og comparative assertions.",
+      "newScenario": "Nyt scenarie",
+      "templates": "Hurtige skabeloner",
+      "createTitle": "Opret scenarie",
+      "nameLabel": "Navn",
+      "namePlaceholder": "fx 100% grøn el",
+      "descLabel": "Beskrivelse (valgfri)",
+      "leverLabel": "Parameter",
+      "percentLabel": "Ændring",
+      "assumptionsLabel": "Antagelser",
+      "cancel": "Annuller",
+      "save": "Gem scenarie",
+      "comparisonTitle": "GWP-sammenligning",
+      "comparisonNote": "Beregninger er illustrative sensitivity-estimater baseret på baseline GWP og fase-hotspots fra fortolkningen. Valider altid i wizard før officiel rapport.",
+      "baseline": "Baseline",
+      "delete": "Slet scenarie",
+      "needLciaTitle": "LCIA kræves først",
+      "needLciaDesc": "Udfyld trin 7 (LCIA) i wizard med GWP-resultat, før du kan oprette scenarier.",
+      "gwpResult": "Scenarie-GWP",
+      "vsBaseline": "vs. baseline",
+      "lever": {
+        "gwp_overall": "Samlet GWP (alle faser)",
+        "transport": "Transport / distribution",
+        "use_energy": "Brugsfase (energi)",
+        "recycled_eol": "End-of-life / genanvendelse",
+        "custom_gwp": "Direkte GWP-værdi"
+      },
+      "template": {
+        "green_electricity": {
+          "name": "Grøn elmix",
+          "desc": "−20% på brugsfase-energi"
+        },
+        "shorter_transport": {
+          "name": "Kortere transport",
+          "desc": "−40% transportbidrag"
+        },
+        "high_recycling": {
+          "name": "Høj genanvendelse",
+          "desc": "−30% EOL-bidrag"
+        },
+        "pessimistic": {
+          "name": "Pessimistisk",
+          "desc": "+15% samlet GWP"
+        }
+      }
+    },
+    "wizardSteps": {
+      "1": "Mål & Scope",
+      "2": "Råmateriale",
+      "3": "Produktion",
+      "4": "Distribution",
+      "5": "Brug",
+      "6": "End-of-life",
+      "7": "LCIA",
+      "8": "Fortolkning",
+      "9": "Critical Review",
+      "10": "Compliance"
+    }
+  },
+  "wizardNav": {
+    "backToProduct": "Tilbage til produkt",
+    "progress": "Fremdrift",
+    "stepOf": "Trin {step} af 10 —",
+    "saving": "Gemmer...",
+    "savedNow": "Gemt netop nu",
+    "savedSeconds": "Gemt {seconds} sek siden",
+    "savedMinute": "Gemt 1 minut siden",
+    "savedMinutes": "Gemt {minutes} minutter siden",
+    "back": "Tilbage",
+    "save": "Gem",
+    "saveAndContinue": "Gem og fortsæt",
+    "viewCompliance": "Se compliance"
+  },
+  "dqi": {
+    "title": "Datakvalitet (Pedigree-matrix)",
+    "subtitle": "1 = Meget lav, 5 = Meget høj",
+    "reliability": "Pålidelighed",
+    "reliabilityDesc": "Kildens troværdighed",
+    "completeness": "Fuldstændighed",
+    "completenessDesc": "Dækning af processer",
+    "temporal": "Temporal",
+    "temporalDesc": "Dataens aktualitet",
+    "geographic": "Geografisk",
+    "geographicDesc": "Match med dit produkt",
+    "technological": "Teknologisk",
+    "technologicalDesc": "Match med din teknologi",
+    "scores": {
+      "1": "Meget lav",
+      "2": "Lav",
+      "3": "Medium",
+      "4": "Høj",
+      "5": "Meget høj"
+    }
+  },
+  "redFlag": {
+    "optional": "Valgfrit",
+    "required": "Påkrævet",
+    "missing": "Mangler",
+    "title": "Manglende oplysning",
+    "whyImportant": "Hvorfor det er vigtigt:",
+    "howToFind": "Sådan finder du det:",
+    "impactLabel": "Impact:",
+    "critical": "Kritisk",
+    "high": "Høj",
+    "medium": "Medium",
+    "low": "Lav"
+  },
+  "complianceCheck": {
+    "title": "Compliance Check",
+    "subtitle": "Automatisk validering mod ISO 14044's 15 obligatoriske elementer.",
+    "score": "{fulfilled} af {total} obligatoriske krav opfyldt",
+    "generateReport": "Generer rapport",
+    "checklist": "ISO 14044 Tjekliste (15 elementer)",
+    "fulfilled": "Opfyldt",
+    "missing": "Mangler",
+    "optional": "Valgfrit",
+    "ready": "Klar til rapport-generering",
+    "good": "God fremdrift — fortsæt wizard for at udfylde resterende felter",
+    "low": "Mangler data i flere nøgle-sektioner — start i trin 1",
+    "generateDraft": "Generer udkast til rapport",
+    "compareLevel": "Sammenlign med ambitionsniveau",
+    "achieved": "Opnået",
+    "missing_pct": "{pct}% mangler",
+    "requires": "Kræver min. {min}% compliance",
+    "items": {
+      "purpose": "Formål med studiet dokumenteret",
+      "fu": "Funktionel enhed defineret og kvantificeret",
+      "boundary": "Systemgrænser defineret",
+      "cutoff": "Cut-off kriterium defineret",
+      "allocation": "Allokeringsmetode valgt og begrundet",
+      "lciRaw": "Råmaterialer og inputflow dokumenteret",
+      "lciProdEnergy": "Produktionsenergi og processer dokumenteret",
+      "lciProdEmit": "Direkte produktionsemissioner (VOC, NOx m.fl.)",
+      "lciDist": "Transport i distributionsfasen dokumenteret",
+      "lciUse": "Antagelser om brugerfase dokumenteret",
+      "lciEolRecovery": "Genanvendelses- og recovery-antagelser (slutafhandling)",
+      "lciEolTakeback": "Take-back / WEEE-registrering dokumenteret",
+      "lciaMethod": "LCIA-metode valgt og begrundet",
+      "sensitivity": "Følsomhedsanalyse gennemført",
+      "conclusions": "Konklusioner og begrænsninger dokumenteret",
+      "lci": "LCI-data for alle faser registreret",
+      "dqi": "Datakilder og -kvalitet dokumenteret (DQI)",
+      "gwp": "GWP-karakterisering gennemført",
+      "review": "Critical review (hvis krævet)"
+    }
+  },
+  "report": {
+    "title": "LCA Rapport",
+    "subtitle": "Udarbejdet i overensstemmelse med ISO 14040:2006 og ISO 14044:2006",
+    "toc": "Indholdsfortegnelse",
+    "exportPdf": "Eksporter PDF",
+    "rewrite": "Skriv om",
+    "editBtn": "Rediger",
+    "saveChanges": "Gem ændringer",
+    "cancel": "Annuller",
+    "prevSection": "← Forrige sektion",
+    "nextSection": "Næste sektion →",
+    "sections": {
+      "executive_summary": "Resumé",
+      "goal_scope": "Formål & Afgrænsning",
+      "lci_raw": "LCI: Råmaterialer",
+      "lci_production": "LCI: Produktion",
+      "lci_distribution": "LCI: Distribution",
+      "lci_use": "LCI: Brug",
+      "lci_eol": "LCI: End-of-life",
+      "lcia": "LCIA: Miljøpåvirkning",
+      "interpretation": "Fortolkning",
+      "conclusion": "Konklusion"
+    }
+  },
+  "wizardStepContent": {
+    "step1": {
+      "title": "Trin 1: Mål & Scope",
+      "subtitle": "Definer formål, funktionel enhed og systemgrænser for din LCA.",
+      "basicInfo": "Grundlæggende information",
+      "purposeLabel": "Formål med LCA",
+      "purposeHelper": "ISO 14044 §4.2.2 kræver at formålet med studiet klart beskrives og kommunikeres til interessenter.",
+      "purposePlaceholder": "Beskriv den konkrete beslutning LCA'en skal understøtte...",
+      "intendedAudience": "Hvad er den primære grund til at du laver denne LCA?",
+      "audiences": { "design": "Internt designteam", "customers": "Kunder", "investors": "Investorer", "authorities": "Myndigheder", "public": "Offentligheden", "censor": "Censor" },
+      "comparativeAssertion": "Sammenlignende påstand (Comparative Assertion)",
+      "comparativeNote": "Hvis ja → critical review påkrævet per ISO 14044 §6.3. Markeres tydeligt i rapporten.",
+      "functionalUnit": "Funktionel enhed",
+      "fuHelper": "Den funktionelle enhed er rygraden i hele LCA'en og gør resultater sammenlignelige.",
+      "fuPlaceholder": "Beskriv hvad produktet GIVER brugeren — ikke hvad det ER...",
+      "fuType": "Vælg type",
+      "fuTypes": { "time": "Tidsbaseret", "usage": "Brugsbaseret", "output": "Outputbaseret" },
+      "fuQuantity": "Antal",
+      "fuUnit": "Enhed",
+      "fuUnitPlaceholder": "fx stk/år",
+      "fuTextPlaceholder": "fx 'Spor ét brætspil i ét år med ≥85% datavaliditet...'",
+      "referenceFlow": "Referenceflow",
+      "rfHelper": "Auto-deriveret fra FU — beskriv den fysiske mængde produkter/komponenter der kræves",
+      "rfPlaceholder": "fx '850 QR-labels pr. år + 1 admin-tablet'",
+      "systemBoundaries": "Systemgrænser",
+      "boundaryType": "Systemgrænse-type",
+      "boundaryTypes": { "cradle_to_grave": "Råmateriale → EOL", "cradle_to_gate": "Råmateriale → fabriksport", "cradle_to_gate_recycled": "Inkl. cirkulær genanvendelse", "gate_to_gate": "Kun produktionsprocessen", "gate_to_grave": "Produktion → EOL" },
+      "includedPhases": "Inkluderede faser",
+      "phases": { "raw_material": "Råmateriale", "production": "Produktion", "distribution": "Distribution", "use": "Brug", "eol": "EOL", "recycling": "Genanvendelse" },
+      "cutOff": "Cut-off kriterium (%)",
+      "cutOffHelper": "Inkluder alle inputs der bidrager med mere end X% af total masse, energi eller miljøpåvirkning.",
+      "allocationMethod": "Allokeringsmetode",
+      "allocationMethods": { "avoid": "1. Undgå allokering", "avoidDesc": "Foretrukket (ISO 14044 hierarki)", "expand": "2. Systemudvidelse", "expandDesc": "Udvid systemgrænsen for at undgå allokering", "physical": "3. Fysisk allokering", "physicalDesc": "Baseret på masse, energi eller andet fysisk kriterium", "economic": "4. Økonomisk allokering", "economicDesc": "Baseret på markedsværdi — kun som sidste udvej" },
+      "recommended": "Anbefalet",
+      "ambitionLevel": "Ambitionsniveau",
+      "ambitions": { "SCREENING": "Hurtig overbliks-analyse, færre datakrav", "DETAILED": "Fuld ISO 14044-datadækning", "CRITICAL_REVIEWED": "Ekstern review krævet", "EPD_VERIFIED": "Klar til officiel EPD-publication" },
+      "advancedSettings": "Avancerede indstillinger",
+      "geographicScope": "Geografisk scope",
+      "geoPlaceholder": "fx 'Danmark' eller 'Global supply chain → EU'",
+      "timePeriod": "Tidsperiode",
+      "timePlaceholder": "fx '2026-2027' eller '2026-2031 (5-års scope)'",
+      "limitations": "Begrænsninger og forbehold",
+      "limitationsPlaceholder": "Hvad er IKKE dækket af denne LCA? Hvilke antagelser kan have stor indflydelse?"
+    },
+    "step2": {
+      "title": "Trin 2: Råmateriale",
+      "subtitle": "Registrer alle materialer og komponenter der indgår i produktet.",
+      "material": "Materiale {n}",
+      "remove": "Fjern",
+      "nameLabel": "Materialenavn",
+      "nameHelper": "Hvert materiale skal identificeres præcist med handelsnavn og leverandørspecifikation.",
+      "namePlaceholder": "Brug det kemiske eller handelsnavn. Henvis til leverandørens produktspecifikation.",
+      "quantityLabel": "Mængde pr. FU",
+      "quantityHelp": "Angiv mængden pr. funktionel enhed (FU). Eksempel: 1 stk produkt = summen af alle materialer. Find data fra stykliste (BOM), tegninger eller leverandørspecifikationer. Omregning: 1 ton = 1000 kg, 1 liter vand ≈ 1 kg.",
+      "unit": "Enhed",
+      "typeLabel": "Materialetype",
+      "types": { "primary": "Primært", "secondary": "Sekundært (recycled)", "biobased": "Biobaseret" },
+      "originLabel": "Oprindelsesland",
+      "originPlaceholder": "fx 'Danmark', 'Kina', 'Global'",
+      "sourceTypeLabel": "Kildetype",
+      "sourceTypes": { "measurement": "Måling", "supplier": "Leverandør-data", "literature": "Litteratur", "assumption": "Antagelse", "expert": "Ekspertvurdering" },
+      "sourceDetailLabel": "Kildedetaljer",
+      "sourceDetailHelper": "Angiv URL, citation, leverandørnavn eller database-UUID",
+      "emissionLabel": "CO₂-eq pr. enhed",
+      "emissionHelper": "kg CO₂-eq pr. enhed — fra database eller leverandør",
+      "recycledContent": "Genanvendt indhold %",
+      "recycledHelper": "Procentdel af materialet som stammer fra genanvendt input (0-100%). Fx: PET-flaske med 30% post-consumer recycled = 30. Find data i leverandørens Environmental Product Declaration (EPD) eller materialecertifikat.",
+      "addMaterial": "Tilføj endnu et materiale"
+    },
+    "step3": {
+      "title": "Trin 3: Produktion",
+      "subtitle": "Registrer energiforbrug, processer og emissioner i produktionsfasen.",
+      "process": "Proces {n}",
+      "remove": "Fjern",
+      "processName": "Procesnavn",
+      "location": "Lokation",
+      "locationPlaceholder": "fx 'Danmark', 'Taiwan'",
+      "energy": "Energiforbrug (kWh pr. FU)",
+      "energyHelper": "kWh forbrugt i processen pr. funktionel enhed. Aflæs fra elmåleren eller energiregning / produceret antal enheder. Eksempel: fabrik bruger 50.000 kWh/mdr og producerer 10.000 stk → 5 kWh/stk. Omregning: 1 MJ = 0,278 kWh.",
+      "energySource": "Energikilde",
+      "energySources": { "dk": "DK el-mix", "tw": "TW el-mix (høj kul-andel)", "de": "DE el-mix", "solar": "Solenergi", "wind": "Vindenergi", "gas": "Naturgas", "coal": "Kul" },
+      "addProcess": "Tilføj endnu en proces",
+      "resourcesTitle": "Ressourceforbrug & emissioner",
+      "waterLabel": "Vandforbrug (liter pr. FU)",
+      "waterHelper": "Vandforbrug er en ISO 14044-anbefalet impact-kategori. Kontakt producenten for vandregnskab pr. produkt.",
+      "waterUnit": "Liter pr. FU",
+      "wasteLabel": "Spild og biprodukter",
+      "wastePlaceholder": "Beskriv spild og biprodukter samt behandlingsmetode",
+      "emissionsLabel": "Direkte emissioner fra processer",
+      "emissionsHelper": "Direkte procesemissioner (VOC, NOx, SO₂, PFC) bidrager direkte til luftkvalitet og klimapåvirkning. Tjek SDS-datablade for anvendte kemikalier.",
+      "emissionsPlaceholder": "fx 'VOC: 0.5 g/L blæk, NOx: ikke kvantificeret'"
+    },
+    "step4": {
+      "title": "Trin 4: Distribution",
+      "subtitle": "Registrer transportstrækninger fra produktion til slutbruger.",
+      "leg": "Transportstrækning {n}",
+      "remove": "Fjern",
+      "fromLabel": "Fra (by/land)",
+      "toLabel": "Til (by/land)",
+      "toPlaceholder": "fx 'Danmark'",
+      "modeLabel": "Transportmetode",
+      "modes": { "truck": "Lastbil", "rail": "Tog", "sea": "Sø", "air": "Fly", "combined": "Kombineret" },
+      "distanceLabel": "Distance (km)",
+      "distanceHelper": "Vejdistance eller søvejsdistance i kilometer fra afsendelsessted til modtager. Brug Google Maps / searates.com for søfragt. Eksempel: DK til DE ≈ 600 km på vej, DK til CN ≈ 20.000 km søvej.",
+      "weightLabel": "Godsvægt (kg pr. FU)",
+      "weightHelper": "Total vægt af varen inkl. emballage pr. funktionel enhed. Find data fra logistikfirmaets faktura eller pakkeseddel. Omregning: 1 pall ≈ 15-25 kg tara-emballage.",
+      "loadFactor": "Lastfaktor (%)",
+      "loadFactorHelper": "Gennemsnitlig belastningsfaktor for transporten (0-100%). Fuld last = 100%, halvt lastet = 50%. EU-gennemsnit for lastbil ≈ 58%. Lavere lastfaktor = højere emission pr. kg-km.",
+      "addLeg": "Tilføj transportstrækning",
+      "packagingTitle": "Distributionsemballage",
+      "packagingMaterial": "Emballagemateriale",
+      "packagingPlaceholder": "fx 'Pap', 'Skumplast'",
+      "packagingWeight": "Mængde (kg pr. FU)",
+      "packagingRecyclable": "Emballagen er genanvendelig"
+    },
+    "step5": {
+      "title": "Trin 5: Brug",
+      "subtitle": "Registrer energiforbrug, levetid og adfærdsantagelser for brugsfasen.",
+      "lifetimeTitle": "Levetid og energiforbrug",
+      "lifetimeLabel": "Forventet levetid",
+      "lifetimeHelper": "Levetid er afgørende for at normalisere impact pr. funktionel enhed korrekt. Brug producentens garantiperiode + typisk brug fra branchedata.",
+      "lifetimeUnit": "år",
+      "energyLabel": "Energiforbrug under brug",
+      "energyHelper": "Gennemsnitligt elforbrug pr. år under normal brug. Mål med energimåler (Kill A Watt) eller brug producent-specifikation (nominel watt × brug-timer ÷ 1000 = kWh). Eksempel: 10W × 8h/dag × 365 dage ÷ 1000 = 29,2 kWh/år.",
+      "energyUnit": "kWh/år",
+      "consumablesLabel": "Forbrugsstoffer under brug",
+      "consumablesPlaceholder": "fx 'Label-udskiftning hver 1-2 år', 'AAA-batterier x4 pr. år'",
+      "maintenanceLabel": "Vedligeholdelse",
+      "maintenancePlaceholder": "Hyppighed og type af vedligeholdelse",
+      "behaviorTitle": "Brugeradfærd og antagelser",
+      "behaviorLabel": "Brugeradfærds-antagelser",
+      "behaviorHelper": "Brugeradfærd kan have stor indflydelse på use-phase impact. Beskriv typisk brugsmønster baseret på producentdata.",
+      "behaviorPlaceholder": "fx 'Bruger antaget at have smartphone (>92% af danskere over 16). 8h daglig brug.'",
+      "reboundLabel": "Rebound-effekter",
+      "reboundHelper": "Beskriver utilsigtede forøgede forbrug som følge af forbedret effektivitet",
+      "reboundPlaceholder": "fx 'Ingen rebound-effekter identificeret' eller 'Energibesparelse kan føre til øget brug'"
+    },
+    "step6": {
+      "title": "Trin 6: End-of-Life",
+      "subtitle": "Definer hvordan produktet håndteres ved endt levetid. Procenterne skal summere til 100%.",
+      "total": "Total: {pct}%",
+      "totalValid": "✓ Korrekt",
+      "totalInvalid": "— mangler {remaining}% (skal summere til 100%)",
+      "routes": { "reuse": "Genbrug", "recycling": "Genanvendelse (recycling)", "energy": "Energi-genvinding (forbrænding)", "landfill": "Deponi", "other": "Andet" },
+      "disassembly": "Produktet er designet til adskillelse",
+      "disassemblyNote": "Nemmere adskillelse forbedrer genanvendelses-rates betydeligt",
+      "disassemblyDesc": "Beskriv design-for-disassembly",
+      "disassemblyPlaceholder": "fx 'Snap-fit forbindelser uden lim, standardskruer, materialemarkering'",
+      "assumptionsTitle": "Antagelser og take-back",
+      "recoveryRateHelper": "Procentdel der reelt genanvendes (0-100%). Find data i Danmarks Statistik, Circular Economy-rapport for din branche, eller brug EU Waste Framework Directive gennemsnit. Plastik i DK: ~30%, Papir/pap: ~70%, Metal: ~80-95%.",
+      "assumptionsLabel": "Recovery-rate antagelser",
+      "assumptionsHelper": "EOL-antagelser skal baseres på faktiske systemer. Brug dansk/EU affaldsstatistik for din produktkategori.",
+      "assumptionsPlaceholder": "fx 'Baseret på dansk affaldsstatistik 2024' eller 'Konservativ: produktet antages at følge bruger til skraldespand'",
+      "takebackLabel": "Eksisterer der et producentansvar/take-back system?",
+      "takebackPlaceholder": "fx 'WEEE-registreret', 'Leverandør take-back via ReturnBox', 'Ingen'"
+    },
+    "step7": {
+      "title": "Trin 7: LCIA-konfiguration",
+      "subtitle": "Vælg LCIA-metode og impact-kategorier.",
+      "recommended": "Anbefalet",
+      "methodDescs": {
+        "ReCiPe2016": "Den mest anvendte internationale metode. Dækker 18 midpoint + 3 endpoint kategorier.",
+        "CML2002": "Europæisk standard, meget anvendt i akademisk og industriel LCA.",
+        "TRACI": "Påkrævet for US-markedet.",
+        "EF31": "Påkrævet for EU-PEF og grønne indkøb.",
+        "ILCD": "EU JRC anbefalet metode for europæiske produkter.",
+        "GWP_only": "Kun klimapåvirkning (carbon footprint). Baseret på IPCC AR6 (2021)."
+      },
+      "categoriesHelper": "GWP er obligatorisk. Vælg yderligere kategorier relevant for dit produkt.",
+      "gwpRequired": "Påkrævet",
+      "normalizationTitle": "Normalisering og vægtning",
+      "normalizationLabel": "Normalisering",
+      "normalizationHelper": "Valgfrit ISO-element. Relaterer resultater til et referencesystem (fx europæisk gennemsnit).",
+      "weightingLabel": "Vægtning",
+      "weightingHelper": "Valgfrit ISO-element — kun hvor eksplicit begrundet. ⚠️ ISO 14044 advarer mod over-fortolkning af vægtede resultater."
+    },
+    "step8": {
+      "title": "Trin 8: Fortolkning",
+      "subtitle": "Identificer hotspots, kør følsomhedsanalyse og dokumenter konklusioner.",
+      "lciaTitle": "Beregnet LCIA-resultat",
+      "gwp": "GWP (klimapåvirkning)",
+      "gwpUnit": "kg CO₂-eq pr. FU",
+      "water": "Vandforbrug",
+      "waterUnit": "kg pr. FU",
+      "resources": "Ressourceforbrug",
+      "sensitivityTitle": "Følsomhedsanalyse",
+      "sensitivityParams": "Vælg nøgleparametre (3-5 anbefalet)",
+      "sensitivityParams_list": "levetid / genanvendelsesrate / energiforbrug-brug / materialer-mængde",
+      "sensitivityResult": "Resultat af følsomhedsanalyse",
+      "sensitivityPlaceholder": "fx 'Konklusion robust ift. levetid ±50%; el-mix har størst indflydelse'",
+      "conclusionsTitle": "Konklusioner og anbefalinger",
+      "conclusionsLabel": "Konklusioner",
+      "conclusionsHelper": "Hvad viser LCA'en konkret? Brug kvantitative tal fra resultaterne.",
+      "conclusionsPlaceholder": "fx 'Produkt A har 40x lavere GWP end alternativ B, primært drevet af materialevalg i råvarefasen...'",
+      "recommendationsLabel": "Anbefalinger",
+      "recommendationsPlaceholder": "fx 'Prioritér genanvendte materialer i råvarefasen. Forøg EOL take-back.'",
+      "limitationsLabel": "Begrænsninger",
+      "limitationsHelper": "Hvad dækker LCA'en IKKE? Hvad er centrale usikkerheder?",
+      "limitationsPlaceholder": "fx 'Brugerens smartphone er ikke inkluderet. Real-world adoptionsrate er antaget 100%.'"
+    },
+    "step9": {
+      "title": "Trin 9: Critical Review",
+      "notRequired": "Ikke påkrævet ved nuværende ambitionsniveau",
+      "required": "Critical review kræves ved ambitionsniveau",
+      "updateNote": "Opdater ambitionsniveau i trin 1 for at aktivere.",
+      "configure": "Konfigurer din ISO 14071-baserede review-proces.",
+      "reviewTypes": {
+        "internal": "Intern review (peer)",
+        "internalDesc": "Intern kollega med LCA-erfaring",
+        "external_single": "Ekstern enkelt-reviewer",
+        "externalSingleDesc": "Ekstern LCA-specialist",
+        "expert_panel": "Ekspert-panel (3 reviewers)",
+        "expertPanelDesc": "Påkrævet for offentlige comparative claims (ISO 14044 §6.3)"
+      },
+      "reviewerName": "Reviewers navn",
+      "reviewerNamePlaceholder": "Fulde navn",
+      "notStarted": "Ikke startet"
+    },
+    "step10": {
+      "title": "Trin 10: Compliance Check",
+      "subtitle": "Automatisk validering mod ISO 14044's 15 obligatoriske elementer.",
+      "score": "{fulfilled} af {total} obligatoriske krav opfyldt",
+      "generateReport": "Generer rapport",
+      "checklist": "ISO 14044 Tjekliste (15 elementer)",
+      "optional": "Valgfrit"
+    }
+  },
+  "exportReport": {
+    "title": "Eksporter rapport",
+    "formatTitle": "Vælg rapportformat",
+    "recommended": "Anbefalet",
+    "requiresEpd": "Kræver EPD-niveau",
+    "requiresScenarios": "Kræver scenarier",
+    "languageTitle": "Rapportsprog",
+    "danish": "Dansk",
+    "english": "Engelsk",
+    "advancedTitle": "Avancerede indstillinger",
+    "includeAppendices": "Inkluder bilag (LCI-tabeller, DQI-matrix, følsomhedsanalyse)",
+    "showDqi": "Vis DQI-pedigree-matrix i rapport",
+    "anonymize": "Anonymiser virksomhedsnavne",
+    "generateBtn": "Generer PDF",
+    "documentIdHint": "kan verificeres på lca-compass.dk",
+    "currentStampId": "Nuværende stempel-ID: #{id} (bevares ved opdatering)",
+    "newVersionLabel": "Ny officiel dokumentversion (nyt stempel-ID)",
+    "generateError": "PDF kunne ikke genereres. Genstart dev-serveren (npm run dev) og kør: npx prisma migrate deploy",
+    "generating": "Genererer PDF...",
+    "downloadAgain": "PDF hentet! Generer igen",
+    "successTitle": "PDF genereret!",
+    "successDesc": "ISO 14044-struktureret rapport downloadet til din computer.",
+    "formats": {
+      "ISO_14044_FULL": { "title": "ISO 14044 Full Report", "desc": "Komplet ISO 14044-struktureret LCA-rapport med alle sektioner, bilag og TOC" },
+      "EPD_ISO_14025": { "title": "EPD (ISO 14025)", "desc": "Environmental Product Declaration — kræver EPD-verificeret ambitionsniveau" },
+      "CARBON_FOOTPRINT_14067": { "title": "Carbon Footprint (ISO 14067)", "desc": "Kun klimapåvirkning (GWP) — til CO₂-rapportering og kommunikation" },
+      "COMPARATIVE_ASSERTION": { "title": "Comparative Assertion", "desc": "Sammenligning af 2+ scenarier — kræver minimum 2 scenarier" }
+    }
+  }
+}
