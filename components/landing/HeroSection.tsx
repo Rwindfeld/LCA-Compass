@@ -51,9 +51,8 @@ export function HeroSection() {
               className="text-display-xl font-display font-bold text-charcoal mb-6 leading-[1.1] mx-auto"
               style={{ letterSpacing: "-0.01em", maxWidth: "800px" }}
             >
-              Fra produkt-idé til officiel{" "}
-              <span className="text-forest-deep">LCA-dokumentation</span> — på
-              under en time
+              {t("titleStart")}{" "}
+              <span className="text-forest-deep">{t("titleHighlight")}</span>
             </h1>
 
             {/* Subtitle */}
@@ -69,12 +68,6 @@ export function HeroSection() {
               >
                 {t("ctaPrimary")}
                 <ArrowRight className="w-4 h-4" strokeWidth={2} />
-              </Link>
-              <Link
-                href="/dashboard"
-                className="inline-flex items-center gap-2 bg-transparent border border-forest-deep/40 text-forest-deep hover:bg-forest-deep hover:text-bone transition-all duration-200 px-8 py-3.5 rounded-xl font-medium text-base"
-              >
-                {t("ctaSecondary")}
               </Link>
             </div>
 

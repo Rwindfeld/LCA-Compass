@@ -67,9 +67,10 @@
     "hero": {
       "eyebrow": "ISO 14040/14044 · ISO 14025 EPD · ISO 14067 CFP",
       "title": "Fra produkt-idé til officiel LCA-dokumentation — på under en time",
+      "titleStart": "Fra produkt-idé til officiel",
+      "titleHighlight": "LCA-dokumentation",
       "subtitle": "LCA-Kompas guider dig gennem ISO 14044's krav skridt-for-skridt og genererer professionel PDF-dokumentation klar til publicering.",
       "ctaPrimary": "Kom i gang",
-      "ctaSecondary": "Se demo med QR vs RFID",
       "trustedBy": "Bruges af progressive designteams"
     },
     "problem": {
