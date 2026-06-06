@@ -44,25 +44,25 @@
     "react-hook-form": "^7.77.0",
     "recharts": "^3.8.1",
     "tailwind-merge": "^3.6.0",
+    "@tailwindcss/postcss": "^4",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "tsx": "^4.22.4",
     "zod": "^4.4.3",
     "prisma": "^7.8.0"
   },
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@tailwindcss/postcss": "^4",
     "@types/canvas-confetti": "^1.9.0",
     "@types/handlebars": "^4.0.40",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.7",
     "husky": "^9.1.7",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
-    "tailwindcss": "^4",
-    "typescript": "^5",
     "vitest": "^4.1.8"
   }
 }
