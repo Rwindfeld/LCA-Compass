@@ -28,7 +28,7 @@ export function UserAccountMenu({ variant = "topbar" }: UserAccountMenuProps) {
 
   const handleSignOut = () => {
     setOpen(false)
-    void signOut({ callbackUrl: `/${locale}/login` })
+    void signOut({ callbackUrl: `${window.location.origin}/${locale}/login` })
   }
 
   return (
