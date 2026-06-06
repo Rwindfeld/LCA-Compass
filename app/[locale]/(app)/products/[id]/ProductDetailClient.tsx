@@ -160,24 +160,28 @@ export function ProductDetailClient({ product }: { product: any }) {
         </div>
       </motion.div>
 
-      {/* Tabs */}
-      <div className="border-b border-sage-mist/30 overflow-x-auto">
-        <div className="flex gap-0 min-w-max">
-          {tabs.map(({ id: tabId, label, icon: Icon }) => (
-            <button
-              key={tabId}
-              onClick={() => setActiveTab(tabId)}
-              className={`flex items-center gap-2 px-4 py-3 text-sm font-medium border-b-2 transition-all duration-200 whitespace-nowrap ${
-                activeTab === tabId
-                  ? "border-brass text-forest-deep"
-                  : "border-transparent text-ink/50 hover:text-charcoal hover:border-sage-mist"
-              }`}
-            >
-              <Icon className="w-4 h-4" strokeWidth={1.5} />
-              {label}
-            </button>
-          ))}
+      {/* Tabs — scrollable på mobil med fade-hint */}
+      <div className="relative border-b border-sage-mist/30">
+        <div className="overflow-x-auto scrollbar-none">
+          <div className="flex gap-0 min-w-max">
+            {tabs.map(({ id: tabId, label, icon: Icon }) => (
+              <button
+                key={tabId}
+                onClick={() => setActiveTab(tabId)}
+                className={`flex items-center gap-1.5 px-3 sm:px-4 py-3 text-xs sm:text-sm font-medium border-b-2 transition-all duration-200 whitespace-nowrap ${
+                  activeTab === tabId
+                    ? "border-brass text-forest-deep"
+                    : "border-transparent text-ink/50 hover:text-charcoal hover:border-sage-mist"
+                }`}
+              >
+                <Icon className="w-3.5 h-3.5 sm:w-4 sm:h-4 flex-shrink-0" strokeWidth={1.5} />
+                {label}
+              </button>
+            ))}
+          </div>
         </div>
+        {/* Fade-hint → indikerer at der er mere at scrolle */}
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-10 bg-gradient-to-l from-bone to-transparent sm:hidden" />
       </div>
 
       {/* Tab content */}

@@ -2,6 +2,8 @@
   "common": {
     "loading": "Loading...",
     "save": "Save",
+    "saved": "Saved",
+    "error": "Error",
     "cancel": "Cancel",
     "delete": "Delete",
     "edit": "Edit",

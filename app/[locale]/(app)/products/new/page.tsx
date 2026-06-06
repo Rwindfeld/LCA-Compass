@@ -93,24 +93,24 @@ export default function NewProductPage() {
           <label className="block text-sm font-medium text-charcoal mb-3">
             {t("typeLabel")} <span className="text-coral text-xs">{t("required")}</span>
           </label>
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
             {PRODUCT_TYPES.map(({ value, icon: Icon }) => (
               <button
                 key={value}
                 type="button"
                 onClick={() => setProductType(value)}
-                className={`flex flex-col items-center gap-2 p-3 rounded-xl border text-center transition-all ${
+                className={`flex flex-col items-center gap-2 p-3 rounded-xl border text-center transition-all active:scale-95 ${
                   productType === value
                     ? "border-forest-deep bg-forest-deep shadow-compass"
                     : "border-sage-mist/40 hover:border-forest-deep/40 bg-bone"
                 }`}
               >
-                <div className={`w-8 h-8 rounded-lg flex items-center justify-center ${
+                <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${
                   productType === value ? "bg-white/15" : "bg-forest-deep/10"
                 }`}>
                   <Icon className={`w-4 h-4 ${productType === value ? "text-bone" : "text-forest-deep"}`} strokeWidth={1.75} />
                 </div>
-                <span className={`text-xs font-medium leading-tight ${productType === value ? "text-bone" : "text-charcoal"}`}>
+                <span className={`text-xs font-medium leading-tight break-words w-full ${productType === value ? "text-bone" : "text-charcoal"}`}>
                   {t(`types.${value}`)}
                 </span>
               </button>

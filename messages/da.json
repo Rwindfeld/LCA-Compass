@@ -2,6 +2,8 @@
   "common": {
     "loading": "Indlæser...",
     "save": "Gem",
+    "saved": "Gemt",
+    "error": "Fejl",
     "cancel": "Annuller",
     "delete": "Slet",
     "edit": "Rediger",
