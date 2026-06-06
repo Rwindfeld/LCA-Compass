@@ -55,15 +55,9 @@ export function MarketingHeader() {
           <LocaleSwitcher />
           <Link
             href="/login"
-            className="hidden sm:inline-flex text-sm font-medium text-ink hover:text-forest-deep transition-colors duration-200 px-3 py-1.5"
-          >
-            {t("login")}
-          </Link>
-          <Link
-            href="/login"
             className="inline-flex items-center gap-2 bg-brass text-forest-deep hover:bg-brass/90 transition-colors duration-200 px-4 py-2 rounded-lg text-sm font-semibold shadow-brass-glow"
           >
-            {t("getStarted")}
+            {t("login")}
           </Link>
         </div>
       </div>
