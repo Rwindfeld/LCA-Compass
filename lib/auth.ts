@@ -13,36 +13,41 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
         provider: { label: "Provider", type: "text" },
       },
       async authorize(credentials) {
-        const email =
-          (credentials?.provider === "google"
-            ? "demo+google@lca-compass.dk"
-            : credentials?.provider === "microsoft"
-              ? "demo+microsoft@lca-compass.dk"
-              : (credentials?.email as string)) ?? "demo@lca-compass.dk"
+        try {
+          const email =
+            (credentials?.provider === "google"
+              ? "demo+google@lca-compass.dk"
+              : credentials?.provider === "microsoft"
+                ? "demo+microsoft@lca-compass.dk"
+                : (credentials?.email as string)) ?? "demo@lca-compass.dk"
 
-        const name =
-          credentials?.provider === "google"
-            ? "Google Demo Bruger"
-            : credentials?.provider === "microsoft"
-              ? "Microsoft Demo Bruger"
-              : "Demo Bruger"
+          const name =
+            credentials?.provider === "google"
+              ? "Google Demo Bruger"
+              : credentials?.provider === "microsoft"
+                ? "Microsoft Demo Bruger"
+                : "Demo Bruger"
 
-        const user = await prisma.user.upsert({
-          where: { email },
-          update: {},
-          create: {
-            email,
-            name,
-            role: "USER",
-            locale: "da",
-          },
-        })
+          const user = await prisma.user.upsert({
+            where: { email },
+            update: {},
+            create: {
+              email,
+              name,
+              role: "USER",
+              locale: "da",
+            },
+          })
 
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-          image: user.image,
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            image: user.image,
+          }
+        } catch (err) {
+          console.error("[auth] authorize error:", err)
+          return null
         }
       },
     }),
