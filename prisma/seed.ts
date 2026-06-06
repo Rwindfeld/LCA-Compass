@@ -11,7 +11,8 @@ import {
   WINDOW_EPD_SEED_PRODUCT,
 } from "../lib/lca/seed-data"
 
-const adapter = new PrismaBetterSqlite3({ url: "file:./dev.db" })
+const databaseUrl = process.env.DATABASE_URL ?? "file:./dev.db"
+const adapter = new PrismaBetterSqlite3({ url: databaseUrl })
 const prisma = new PrismaClient({ adapter })
 
 async function main() {
